@@ -74,7 +74,35 @@ app.post('/signup', async (req, res)=>{
 
 })
 
+//Login API
+app.post('/login', async (req, res)=>{
 
+    const {email, password} = req.body;
+
+    if(!email || !password){
+        return res.json({
+            success: false,
+            message: `Email and Password are Required !`
+        })
+    }
+
+    const existingUser = await User.findOne({email: email, password: password})
+
+    if(existingUser){
+        return res.json({
+            success: true,
+            message: `Login Successful`,
+            data: existingUser
+        })
+    }
+    else
+    {
+        return res.json({
+            success: false,
+            message: `User Already Exists`
+        })
+    }
+})
 
 app.listen(PORT, ()=>{
     console.log(`Server Running on Port ${PORT}`);
