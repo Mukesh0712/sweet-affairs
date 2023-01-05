@@ -79,6 +79,7 @@ app.post('/login', async (req, res)=>{
 
     const {email, password} = req.body;
 
+    //validation to check if email or password fields are not filled
     if(!email || !password){
         return res.json({
             success: false,
@@ -86,6 +87,7 @@ app.post('/login', async (req, res)=>{
         })
     }
 
+    //validation to check if user is Registered
     const existingUser = await User.findOne({email: email, password: password})
 
     if(existingUser){
@@ -99,9 +101,10 @@ app.post('/login', async (req, res)=>{
     {
         return res.json({
             success: false,
-            message: `User Already Exists`
+            message: `Register First`
         })
     }
+
 })
 
 app.listen(PORT, ()=>{
