@@ -128,6 +128,20 @@ app.post('/foodItem', async (req, res)=>{
     })
 })
 
+//Search FoodItem by Category
+app.get('/foodItemByCategory', async (req, res)=>{
+    const {category} = req.query;
+
+    const foodItems = await FoodItem.find({
+        category: {$regex: category, $options: 'i'}
+    })
+
+    res.json({
+        success: true,
+        message: `Food Items Fetched Successfully`,
+        data: foodItems
+    })
+})
 
 app.listen(PORT, () => {
     console.log(`Server Running on Port ${PORT}`);
