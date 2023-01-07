@@ -216,7 +216,7 @@ app.post('/bookTable', async (req, res)=>{
 app.post('/unBookTable', async (req, res)=>{
     const {tableNumber} = req.body;
 
-    const existingTable = await Table.findOne({tableNumber: tableNumber});
+    const existingTable = await Table.findOne({ tableNumber: tableNumber });
 
     if(existingTable){
         existingTable.booked = false;
