@@ -212,6 +212,25 @@ app.post('/bookTable', async (req, res)=>{
     }
 })
 
+//Unbook Table API
+app.post('/unBookTable', async (req, res)=>{
+    const {tableNumber} = req.body;
+
+    const existingTable = await Table.findOne({tableNumber: tableNumber});
+
+    if(existingTable){
+        existingTable.booked = false;
+        existingTable.bookedBy = null;
+        await existingTable.save();
+    }
+
+    res.json({
+        success: true,
+        message: `UnBook Table`,
+        data: existingTable
+    })
+})
+
 app.listen(PORT, () => {
     console.log(`Server Running on Port ${PORT}`);
 })
