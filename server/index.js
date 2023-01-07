@@ -6,6 +6,7 @@ dotenv.config();
 import User from "./models/User.js";
 import FoodItem from "./models/FoodItem.js";
 import Table from "./models/Table.js";
+import Order from "./models/Order.js";
 
 const app = express();
 
