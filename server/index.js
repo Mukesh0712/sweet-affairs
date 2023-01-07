@@ -5,6 +5,7 @@ dotenv.config();
 
 import User from "./models/User.js";
 import FoodItem from "./models/FoodItem.js";
+import Table from "./models/Table.js";
 
 const app = express();
 
@@ -157,6 +158,7 @@ app.get('/foodItemByTitle', async (req, res)=>{
         data: foodItems
     })
 })
+
 
 
 app.listen(PORT, () => {
