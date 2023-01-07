@@ -231,6 +231,18 @@ app.post('/unBookTable', async (req, res)=>{
     })
 })
 
+//Get Available Table API
+app.get('/availableTables', async (req, res)=>{
+    const availableTables = await Table.find({booked: false});
+
+
+    res.json({
+        success: true,
+        message: `Available Table fetched Successfully`,
+        data: availableTables
+    })
+})
+
 app.listen(PORT, () => {
     console.log(`Server Running on Port ${PORT}`);
 })
