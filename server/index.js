@@ -159,7 +159,32 @@ app.get('/foodItemByTitle', async (req, res)=>{
     })
 })
 
+//Create Table API
+app.post('/createTable', async (req, res)=>{
+    const{tableNumber} = req.body;
 
+    const existingTable = await Table.findOne({tableNumber: tableNumber});
+
+    if(existingTable){
+        return res.json({
+            success: false,
+            message: `Table ${existingTable} Already Exists`
+        })
+    }
+
+    const table = new Table({
+        tableNumber: tableNumber,
+        occupied: false
+    })
+
+    const savedTable = await table.save();
+    
+    res.json({
+        success: true,
+        message: `Table Created Successfully`,
+        data: savedTable
+    })
+})
 
 app.listen(PORT, () => {
     console.log(`Server Running on Port ${PORT}`);
