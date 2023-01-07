@@ -2,8 +2,8 @@ import { Schema, model } from "mongoose";
 
 const tableSchema = new Schema({
     tableNumber: Number,
-    occupied: Boolean,
-    occupiedBy: {
+    booked: Boolean,
+    bookedBy: {
         type: Schema.Types.ObjectId,
         ref: "User"
     }

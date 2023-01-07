@@ -168,13 +168,13 @@ app.post('/createTable', async (req, res)=>{
     if(existingTable){
         return res.json({
             success: false,
-            message: `Table ${existingTable} Already Exists`
+            message: `Table Already Exists`
         })
     }
 
     const table = new Table({
         tableNumber: tableNumber,
-        occupied: false
+        booked: false
     })
 
     const savedTable = await table.save();
@@ -184,6 +184,32 @@ app.post('/createTable', async (req, res)=>{
         message: `Table Created Successfully`,
         data: savedTable
     })
+})
+
+//Book Table API
+app.post('/bookTable', async (req, res)=>{
+    const {tableNumber, userID} = req.body;
+
+    const existingTable = await Table.findOne({tableNumber: tableNumber});
+
+    if(existingTable && existingTable.booked){
+        return res.json({
+            success: false,
+            message: `Table Already Booked`
+        })
+    }
+
+    if(existingTable){
+        existingTable.booked = true;
+        existingTable.bookedBy= userID;
+        await existingTable.save();
+
+        res.json({
+            success: true,
+            message: `Table Booked Successfully`,
+            data: existingTable
+        })
+    }
 })
 
 app.listen(PORT, () => {
