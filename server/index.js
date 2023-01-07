@@ -212,7 +212,7 @@ app.post('/bookTable', async (req, res)=>{
     }
 })
 
-//Unbook Table API
+//UnBook Table API
 app.post('/unBookTable', async (req, res)=>{
     const {tableNumber} = req.body;
 
