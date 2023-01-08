@@ -268,6 +268,19 @@ app.post('/orderFoodItems', async (req, res)=>{
     })
 })
 
+//Order API
+app.get('/order', async (req, res)=>{
+    const {orderID} = req.query;
+
+    const order = await Order.findOne({orderID: orderID});
+
+    res.json({
+        success: true,
+        message: `Order Fetched Successfully`,
+        data: order
+    })
+})
+
 app.listen(PORT, () => {
     console.log(`Server Running on Port ${PORT}`);
 })
