@@ -244,6 +244,30 @@ app.get('/availableTables', async (req, res)=>{
     })
 })
 
+//Order FoodItems API
+app.post('/orderFoodItems', async (req, res)=>{
+    const {userID, tableNumber, items} = req.body;
+
+    const totalOrders = await Order.countDocuments();
+
+    const orderID = totalOrders + 1;
+
+    const order = new Order({
+        orderID: orderID,
+        userID: userID,
+        tableNumber: tableNumber,
+        items: items
+    })
+
+    const savedOrder = await order.save();
+
+    res.json({
+        success: true,
+        message: `Order Placed Successfully`,
+        data: savedOrder
+    })
+})
+
 app.listen(PORT, () => {
     console.log(`Server Running on Port ${PORT}`);
 })
