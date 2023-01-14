@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from 'react'
-import {currentUser} from './../../util/currentUser'
 import axios from "axios"
+import swal from 'sweetalert'
 
-import Swal from 'sweetalert2'
-
+import { currentUser } from './../../util/currentUser'
 import "./Login.css"
 
 function Login() {
@@ -11,8 +10,8 @@ function Login() {
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
 
-    useEffect(()=>{
-        if(currentUser){
+    useEffect(() => {
+        if (currentUser) {
             window.location.href = '/'
         }
     }, [])
@@ -21,18 +20,26 @@ function Login() {
     async function loginUser() {
         const response = await axios.post('/login', {
             email: email,
-            password: password,        })
-
-        console.log(response.data);
+            password: password,
+        })
 
         if (response.data.success) {
-            alert(response.data.message)
+            await swal({
+                icon: 'success',
+                title: "Success",
+                text: response.data.message,
+                button: "Ok!"
+            })
             localStorage.setItem('currentUser', JSON.stringify(response.data.data))
             window.location.href = '/'
         }
-        else
-        {
-            alert('Error : ' +  response.data.message)
+        else {
+            await swal({
+                icon: 'error',
+                title: "Error",
+                text: response.data.message,
+                button: "Try Again"
+            })
             setEmail("")
             setPassword("")
             localStorage.removeItem('currentUser')

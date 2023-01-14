@@ -1,11 +1,19 @@
 import React from 'react'
+import swal from 'sweetalert'
+
 import {currentUser} from './../../util/currentUser'
 import "./Home.css"
 
 function Home() {
 
-    function logOut(){
+    async function logOut(){
         localStorage.removeItem('currentUser')
+        await swal({
+            icon: 'success',
+            title: "Success",
+            text: "Logout Successfully",
+            button: "Ok!"
+        })
         window.location.href = '/login'
     }
 

@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react'
-import {currentUser} from './../../util/currentUser'
-
 import axios from "axios"
+import swal from 'sweetalert'
+
+import { currentUser } from './../../util/currentUser'
 import "./Signup.css"
 
 function Signup() {
@@ -12,8 +13,8 @@ function Signup() {
     const [password, setPassword] = useState("")
     const [role, setRole] = useState("Customer")
 
-    useEffect(()=>{
-        if(currentUser){
+    useEffect(() => {
+        if (currentUser) {
             window.location.href = '/'
         }
     }, [])
@@ -30,12 +31,21 @@ function Signup() {
         console.log(response.data);
 
         if (response.data.success) {
-            alert(response.data.message)
+            await swal({
+                icon: 'success',
+                title: "Success",
+                text: response.data.message,
+                button: "Ok!"
+            })
             window.location.href = "/login"
         }
-        else
-        {
-            alert(response.data.message)
+        else {
+            swal({
+                icon: 'error',
+                title: "Error",
+                text: response.data.message,
+                button: "Try Again!"
+            })
             setName("")
             setPhone("")
             setEmail("")
