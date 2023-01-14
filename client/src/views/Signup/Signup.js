@@ -1,7 +1,7 @@
-import React, { useState } from 'react'
-import axios from "axios"
-import Swal from 'sweetalert2'
+import React, { useState, useEffect } from 'react'
+import {currentUser} from './../../util/currentUser'
 
+import axios from "axios"
 import "./Signup.css"
 
 function Signup() {
@@ -11,6 +11,12 @@ function Signup() {
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
     const [role, setRole] = useState("Customer")
+
+    useEffect(()=>{
+        if(currentUser){
+            window.location.href = '/'
+        }
+    }, [])
 
     async function signupUser() {
         const response = await axios.post('/signup', {
