@@ -160,6 +160,17 @@ app.get('/foodItemByTitle', async (req, res)=>{
     })
 })
 
+//All Food Items API
+app.get('/allFoodItems', async (req, res)=>{
+    const foodItems = await FoodItem.find()
+
+    res.json({
+        success: true,
+        message: `Food Items Fetched Successfully`,
+        data: foodItems
+    })
+})
+
 //Create Table API
 app.post('/createTable', async (req, res)=>{
     const{tableNumber} = req.body;
