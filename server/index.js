@@ -282,7 +282,7 @@ app.get('/order', async (req, res)=>{
 })
 
 //Order By userID
-app.get('/orderByUserID', async (req, res)=>{
+app.get('/ordersByUserID', async (req, res)=>{
     const {userID} = req.query;
 
     const orders = await Order.find({userID: userID});

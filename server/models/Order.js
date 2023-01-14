@@ -7,11 +7,12 @@ const orderSchema = new Schema({
         type: Schema.Types.ObjectId,
         ref: "User"
     },
-    items:[{
-        name: String,
-        price: Number,
-        quantity: Number
-    }]
+    items: [
+        {
+            name: String,
+            price: Number,
+            quantity: Number
+        }]
 })
 
 const Order = model("Order", orderSchema);
