@@ -1,7 +1,7 @@
 import { Schema, model } from "mongoose";
 
 const tableSchema = new Schema({
-    tableNumber: Number,
+    tableNumber: String,
     booked: Boolean,
     bookedBy: {
         type: Schema.Types.ObjectId,
