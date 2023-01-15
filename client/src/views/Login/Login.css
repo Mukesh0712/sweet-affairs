@@ -5,41 +5,47 @@
 
 .login-row {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
-    padding: 0%;
+    margin-top: 20px;
 }
 
 .login-col-1 {
     width: 500px;
-    height: 60%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .login-col-2 {
     width: 500px;
+    height: 400px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .login-img {
-    width: 110%;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .login-form {
-    border: 2px solid #252525;
-    border-radius: 15px;
-    width: 70%;
-    height: 350px;
+    border-radius: 10px;
+    width: 75%;
+    height: 340px;
     margin-left: auto;
     margin-right: auto;
+    margin-top: 30px;
     padding: 15px;
-    transition: height 1s, width 1s, background 1s;
-}
-
-.login-form:hover{
-    width: 75%;
+    box-shadow: #989898 0px 0px 30px 2px;
 }
 
 .login-form-title {
     text-align: center;
+}
+
+.login-form-title h2{
+    color: #407BFF;
 }
 
 .login-form-input-container{
@@ -54,8 +60,8 @@
 .login-form-input {
     width: 90%;
     height: 36px;
-    font-size: 14px;
-    font-weight: 500;
+    font-size: 16px;
+    font-weight: 400;
     padding: 5px;
     border: 0;
     border-bottom: 1px solid grey;
@@ -66,34 +72,56 @@
     color: #252525;
 }
 
-.login-form-forgot{
+.login-form-checkbox-forgot-btn{
+    margin: 10px;
+    padding-top: 5px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.login-form-checkbox{
     width: 130px;
-    margin-left: auto;
-    margin-right: auto;
+    font-size: 12px;
+}
+
+.login-form-forgot{
+    width: 150px;
+    padding-right: 10px;    
+    font-size: 12px;
 }
 
 .login-form-forgot-pass{
-    font-size: 13px;
+    font-size: 12px;
     cursor: pointer;
-}
-
-.login-form-button {
-    margin: 10px;
 }
 
 .login-btn {
     position: relative;
-    top: 15px;
-    border-radius: 4px;
+    top: 8px;
+    border-radius: 20px;
     border: none;
-    width: 90%;
+    width: 40%;
+    padding-left: 32px;
+    padding-right: 32px;
     height: 36px;
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 500;
     background: #407BFF;
-    color: #fff;
+    color: rgba(255, 255, 255, 0.837);
 }
 
 .login-btn:hover{
     background: #3778be;
+    color: #fff;
+}
+
+.signup-btn{
+    position: relative;
+    top: 20px;
+    width: 90%;
+    height: 36px;
+    font-size: 12px;
+    font-weight: 500;
+    background: transparent;
+    border: none;
 }

@@ -69,7 +69,7 @@ function Signup() {
                             <div className='form-group signup-form'>
 
                                 <div className='signup-form-title'>
-                                    <h2>SIGN UP</h2>
+                                    <h2>Create Account</h2>
                                     <p>Please fill in this form to create an account.</p>
                                     <hr />
                                 </div>
@@ -105,7 +105,7 @@ function Signup() {
                                     </div>
 
                                     <div className='signup-form-button'>
-                                        <button type='button' className='register-btn' onClick={signupUser}>Register</button>
+                                        <button type='button' className='register-btn' onClick={signupUser}>SIGN UP</button>
                                     </div>
 
                                 </div>

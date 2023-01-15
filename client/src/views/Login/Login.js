@@ -47,6 +47,10 @@ function Login() {
         }
     }
 
+    async function signupBtn() {
+        window.location.href = './../Signup'
+    }
+
     return (
         <div className='login-container'>
 
@@ -62,7 +66,7 @@ function Login() {
                             <div className='form-group login-form'>
 
                                 <div className='login-form-title'>
-                                    <h2>CUSTOMER LOGIN</h2>
+                                    <h2>Customer Login</h2>
                                     <hr />
                                 </div>
 
@@ -78,18 +82,23 @@ function Login() {
                                             placeholder='Password' value={password} onChange={(e) => { setPassword(e.target.value) }} />
                                     </div>
 
-                                    <div className='login-form-input-box'>
-                                        <label>
-                                            <input type="checkbox" checked="checkbox" name="remember" /> Remember me
-                                        </label>
-                                    </div>
+                                    <div className='login-form-checkbox-forgot-btn'>
+                                        <div className='login-form-checkbox'>
+                                            <label>
+                                                <input type="checkbox" checked="checkbox" name="remember" /> Remember me
+                                            </label>
+                                        </div>
 
-                                    <div className='login-form-forgot'>
-                                        <p className='login-form-forgot-pass'>Forgot Password?</p>
+                                        <div className='login-form-forgot'>
+                                            <p className='login-form-forgot-pass'>Forgot your password?</p>
+                                        </div>
                                     </div>
-
                                     <div className='login-form-button'>
-                                        <button type='button' className='login-btn' onClick={loginUser}>Login</button>
+                                        <button type='button' className='login-btn' onClick={loginUser}>LOGIN</button>
+                                    </div>
+
+                                    <div className='login-form-signup-btn'>
+                                        <button type='button' className='signup-btn' onClick={signupBtn}>Don't have an account? Sign up</button>
                                     </div>
 
 
