@@ -4,7 +4,7 @@ import swal from 'sweetalert'
 
 import { currentUser } from './../../util/currentUser'
 import "./Login.css"
-import loginImg from "./../../images/loginImg.png"
+import loginImg from "./../../images/Tasting-amico.png"
 
 function Login() {
 
@@ -48,39 +48,58 @@ function Login() {
     }
 
     return (
-        <div >
-            <h1 className='text-center'>Login</h1>
+        <div className='login-container'>
 
-            <div className='row'>
+            <div className='row login-row'>
 
-                <div className='col-md-6'>
+                <div className='col-md-6 login-col-1'>
+                    <div><img alt='login-img' src={loginImg} className='login-img' /></div>
+                </div>
+
+                <div className='col-md-6 login-col-2'>
                     <div className='form-container'>
                         <form>
-                            <div className='form-group'>
+                            <div className='form-group login-form'>
 
-                                <div>
-                                    <label htmlFor='email'>Email Id</label>
-                                    <input type='email' className='form-control' id='mail'
-                                        placeholder='abc@gmail.com' value={email} onChange={(e) => { setEmail(e.target.value) }} />
+                                <div className='login-form-title'>
+                                    <h2>CUSTOMER LOGIN</h2>
+                                    <hr />
                                 </div>
 
-                                <div>
-                                    <label htmlFor='password'>Password</label>
-                                    <input type='password' className='form-control' id='password'
-                                        placeholder='123' value={password} onChange={(e) => { setPassword(e.target.value) }} />
+                                <div className='login-form-input-container'>
+
+                                    <div className='login-form-input-box'>
+                                        <input type='email' className='login-form-input' id='mail'
+                                            placeholder='Email Address' value={email} onChange={(e) => { setEmail(e.target.value) }} />
+                                    </div>
+
+                                    <div className='login-form-input-box'>
+                                        <input type='password' className='login-form-input' id='password'
+                                            placeholder='Password' value={password} onChange={(e) => { setPassword(e.target.value) }} />
+                                    </div>
+
+                                    <div className='login-form-input-box'>
+                                        <label>
+                                            <input type="checkbox" checked="checkbox" name="remember" /> Remember me
+                                        </label>
+                                    </div>
+
+                                    <div className='login-form-forgot'>
+                                        <p className='login-form-forgot-pass'>Forgot Password?</p>
+                                    </div>
+
+                                    <div className='login-form-button'>
+                                        <button type='button' className='login-btn' onClick={loginUser}>Login</button>
+                                    </div>
+
+
                                 </div>
 
-                                <div>
-                                    <button type='button' className='btn btn-warning' onClick={loginUser}>Login</button>
-                                </div>
                             </div>
                         </form>
                     </div>
                 </div>
 
-                <div className='col-md-6'>
-                    <div><img alt='' src={loginImg} /></div>
-                </div>
 
             </div>
 

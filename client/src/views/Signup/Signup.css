@@ -19,10 +19,6 @@
     width: 500px;
 }
 
-.signup-col-2:hover{
-    width: 500px;
-}
-
 .signup-img {
     width: 110%;
 }
@@ -55,10 +51,6 @@
     margin-top: 20px;
 }
 
-.signup-form-input-label {
-    margin-bottom: 3px;
-}
-
 .signup-form-input {
     width: 90%;
     height: 36px;
@@ -87,7 +79,7 @@
     height: 36px;
     font-size: 14px;
     font-weight: 500;
-    background: #5689C0;
+    background: #407BFF;
     color: #fff;
 }
 

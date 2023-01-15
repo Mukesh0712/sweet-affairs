@@ -60,7 +60,7 @@ function Signup() {
             <div className='row signup-row'>
 
                 <div className='col-md-6 signup-col-1'>
-                    <img alt='Catering service' src={signupImg} className='signup-img' />
+                    <img alt='signup-img' src={signupImg} className='signup-img' />
                 </div>
 
                 <div className='col-md-6 signup-col-2'>
@@ -69,7 +69,7 @@ function Signup() {
                             <div className='form-group signup-form'>
 
                                 <div className='signup-form-title'>
-                                    <h2>Signup</h2>
+                                    <h2>SIGN UP</h2>
                                     <p>Please fill in this form to create an account.</p>
                                     <hr />
                                 </div>
@@ -101,7 +101,7 @@ function Signup() {
                                             <input type="checkbox" checked="checkbox" name="remember" /> Remember me
                                         </label>
 
-                                        <p>By creating an account you agree to our <a href="./Signup.js">Terms & Privacy</a>.</p>
+                                        <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
                                     </div>
 
                                     <div className='signup-form-button'>

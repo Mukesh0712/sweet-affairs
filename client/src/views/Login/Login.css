@@ -1,65 +1,57 @@
-.signup-container {
+.login-container {
     margin: 0%;
     padding: 0%;
 }
 
-.signup-row {
+.login-row {
     display: flex;
     justify-content: space-around;
     align-items: center;
     padding: 0%;
 }
 
-.signup-col-1 {
+.login-col-1 {
     width: 500px;
     height: 60%;
 }
 
-.signup-col-2 {
+.login-col-2 {
     width: 500px;
 }
 
-.signup-col-2:hover{
-    width: 500px;
-}
-
-.signup-img {
+.login-img {
     width: 110%;
 }
 
-.signup-form {
+.login-form {
     border: 2px solid #252525;
     border-radius: 15px;
-    width: 75%;
-    height: 450px;
+    width: 70%;
+    height: 350px;
     margin-left: auto;
     margin-right: auto;
     padding: 15px;
     transition: height 1s, width 1s, background 1s;
 }
 
-.signup-form:hover{
-    width: 85%;
+.login-form:hover{
+    width: 75%;
 }
 
-.signup-form-title {
+.login-form-title {
     text-align: center;
 }
 
-.signup-form-input-container{
+.login-form-input-container{
     text-align: center;
 }
 
-.signup-form-input-box {
+.login-form-input-box {
     margin: 10px;
     margin-top: 20px;
 }
 
-.signup-form-input-label {
-    margin-bottom: 3px;
-}
-
-.signup-form-input {
+.login-form-input {
     width: 90%;
     height: 36px;
     font-size: 14px;
@@ -70,15 +62,26 @@
     background: transparent;
 }
 
-.signup-form-input::placeholder{
+.login-form-input::placeholder{
     color: #252525;
 }
 
-.signup-form-button {
+.login-form-forgot{
+    width: 130px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.login-form-forgot-pass{
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.login-form-button {
     margin: 10px;
 }
 
-.register-btn {
+.login-btn {
     position: relative;
     top: 15px;
     border-radius: 4px;
@@ -87,10 +90,10 @@
     height: 36px;
     font-size: 14px;
     font-weight: 500;
-    background: #5689C0;
+    background: #407BFF;
     color: #fff;
 }
 
-.register-btn:hover{
+.login-btn:hover{
     background: #3778be;
 }
