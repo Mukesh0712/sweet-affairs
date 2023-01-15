@@ -4,6 +4,7 @@ import swal from 'sweetalert'
 
 import { currentUser } from './../../util/currentUser'
 import "./Login.css"
+import loginImg from "./../../images/loginImg.png"
 
 function Login() {
 
@@ -47,14 +48,10 @@ function Login() {
     }
 
     return (
-        <div>
+        <div >
             <h1 className='text-center'>Login</h1>
 
             <div className='row'>
-
-                <div className='col-md-6'>
-
-                </div>
 
                 <div className='col-md-6'>
                     <div className='form-container'>
@@ -79,6 +76,10 @@ function Login() {
                             </div>
                         </form>
                     </div>
+                </div>
+
+                <div className='col-md-6'>
+                    <div><img alt='' src={loginImg} /></div>
                 </div>
 
             </div>
