@@ -9,14 +9,18 @@
     width: 90%;
     height: max-content;
     border-radius: 10px;
-    box-shadow: #b4b4b4 0px 0px 20px 2px;
+    box-shadow: #b4b4b4 0px 0px 10px 3px;
+}
 
+.food-item-card:hover{
+    box-shadow: #aaaaaa 0px 0px 20px 4px;
 }
 
 .food-item-card-img-container {
     width: 100%;
     height: fit-content;
     padding: 0;
+    text-align: center;
 }
 
 .food-item-card-details-container{
@@ -31,7 +35,8 @@
     aspect-ratio: 3/2;
     margin: 0;
     padding: 0;
-
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
 }
 
 .food-item-card-text{
