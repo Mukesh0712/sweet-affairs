@@ -23,30 +23,41 @@ function FoodItemCard({ category, description, imgURL, price, title }) {
     }
 
     return (
-        <div className='col-md-4 food-item-container'>
+        <div className='col-md-3 food-item-container'>
 
-            <div className='food-item-card row'>
+            <div className='food-item-card col-md-4'>
 
-                <div className='food-item-img-container'>
-                    <img alt='' src={imgURL} className='food-item-img' />
+                <div className='food-item-card-img-container'>
+                    <img alt='' src={imgURL} className='food-item-card-img' />
                 </div>
 
-                <h4>{title}</h4>
-
-                <p>{description}</p>
-
-                <h5>Price : {price}₹</h5>
-
-                <div>
-                    <div>
-                        <span onClick={(e) => { setQuantity(quantity - 1) }}>-</span>
-                        <h2>{quantity}</h2>
-                        <span onClick={(e) => { setQuantity(quantity + 1) }}>+</span>
+                <div className='food-item-card-details-container'>
+                    <div className='food-item-card-text'>
+                        <p>{title}</p>
                     </div>
 
-                    <div className='text-center'>
-                        <button type='button' className='btn-add-to-plate' onClick={addToPlate}>Add To Plate</button>
+                    <div className='food-item-card-desc'>
+                        <p>{description}</p>
                     </div>
+
+                    <div className='food-item-card-price-btn'>
+                        <div className='food-item-card-price'>
+                            <p>Price : {price}₹ </p>
+                        </div>
+
+                        <div className='food-item-card-btn'>
+                            <button type='button' className='food-item-card-btn-add' onClick={addToPlate}>Add To Plate</button>
+                        </div>
+                    </div>
+
+                    {/*
+                    <div className='food-item-card-quantity'>
+                        <span onClick={(e) => { setQuantity(quantity - 1) }} className='food-item-card-quantity-inc-dec'><i class="fa-solid fa-minus"></i></span>
+                        <button type='search' className='food-item-card-quantity-num'>{quantity}</button>
+                        <span onClick={(e) => { setQuantity(quantity + 1) }} className='food-item-card-quantity-inc-dec'><i class="fa-solid fa-plus"></i></span>
+                    </div>
+                    */}
+
                 </div>
             </div>
         </div>
