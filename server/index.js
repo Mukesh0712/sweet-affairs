@@ -26,11 +26,11 @@ app.post('/signup', async (req, res) => {
     //validation to check all fields are filled
     const emptyFields = [];
 
-    if (!name) emptyFields.push('name');
-    if (!phone) emptyFields.push('phone');
-    if (!email) emptyFields.push('email');
-    if (!password) emptyFields.push('password');
-    if (!role) emptyFields.push('role');
+    if (!name) emptyFields.push('Name');
+    if (!phone) emptyFields.push('Phone');
+    if (!email) emptyFields.push('Email');
+    if (!password) emptyFields.push('Password');
+    if (!role) emptyFields.push('Role');
 
     if (emptyFields.length > 0) {
         return res.json({
@@ -83,10 +83,17 @@ app.post('/login', async (req, res) => {
     const { email, password } = req.body;
 
     //validation to check if email or password fields are not filled
-    if (!email || !password) {
+    if (!email) {
         return res.json({
             success: false,
-            message: `Email and Password are Required !`
+            message: `Email is Required !`
+        })
+    }
+
+    if (!password) {
+        return res.json({
+            success: false,
+            message: `Password is Required !`
         })
     }
 
@@ -100,18 +107,17 @@ app.post('/login', async (req, res) => {
             data: existingUser
         })
     }
-    else
-    {
+    else {
         return res.json({
             success: false,
-            message: `Invalid Credentials`
+            message: `Invalid Email and Password`
         })
     }
 })
 
 //FoodItem API
-app.post('/foodItem', async (req, res)=>{
-    const {title, description, imgURL, price, category} = req.body;
+app.post('/foodItem', async (req, res) => {
+    const { title, description, imgURL, price, category } = req.body;
 
     const foodItem = new FoodItem({
         title: title,
@@ -131,11 +137,11 @@ app.post('/foodItem', async (req, res)=>{
 })
 
 //Search FoodItem by Category
-app.get('/foodItemByCategory', async (req, res)=>{
-    const {category} = req.query;
+app.get('/foodItemByCategory', async (req, res) => {
+    const { category } = req.query;
 
     const foodItems = await FoodItem.find({
-        category: {$regex: category, $options: 'i'}
+        category: { $regex: category, $options: 'i' }
     })
 
     res.json({
@@ -146,11 +152,11 @@ app.get('/foodItemByCategory', async (req, res)=>{
 })
 
 //Search FoodItem by Title
-app.get('/foodItemByTitle', async (req, res)=>{
-    const {title} = req.query;
+app.get('/foodItemByTitle', async (req, res) => {
+    const { title } = req.query;
 
     const foodItems = await FoodItem.find({
-        title: {$regex: title, $options: 'i'}
+        title: { $regex: title, $options: 'i' }
     })
 
     res.json({
@@ -161,7 +167,7 @@ app.get('/foodItemByTitle', async (req, res)=>{
 })
 
 //All Food Items API
-app.get('/allFoodItems', async (req, res)=>{
+app.get('/allFoodItems', async (req, res) => {
     const foodItems = await FoodItem.find()
 
     res.json({
@@ -172,15 +178,15 @@ app.get('/allFoodItems', async (req, res)=>{
 })
 
 //Create Table API
-app.post('/createTable', async (req, res)=>{
-    const{tableNumber} = req.body;
+app.post('/createTable', async (req, res) => {
+    const { tableNumber } = req.body;
 
-    const existingTable = await Table.findOne({tableNumber: tableNumber});
+    const existingTable = await Table.findOne({ tableNumber: tableNumber });
 
-    if(existingTable){
+    if (existingTable) {
         return res.json({
             success: false,
-            message: `Table Already Exists`
+            message: `Table ${tableNumber} Already Exists`
         })
     }
 
@@ -190,47 +196,47 @@ app.post('/createTable', async (req, res)=>{
     })
 
     const savedTable = await table.save();
-    
+
     res.json({
         success: true,
-        message: `Table Created Successfully`,
+        message: `Table ${tableNumber} Created Successfully`,
         data: savedTable
     })
 })
 
 //Book Table API
-app.post('/bookTable', async (req, res)=>{
-    const {tableNumber, userID} = req.body;
+app.post('/bookTable', async (req, res) => {
+    const { tableNumber, userID } = req.body;
 
-    const existingTable = await Table.findOne({tableNumber: tableNumber});
+    const existingTable = await Table.findOne({ tableNumber: tableNumber });
 
-    if(existingTable && existingTable.booked){
+    if (existingTable && existingTable.booked) {
         return res.json({
             success: false,
-            message: `Table Already Booked`
+            message: `Table ${tableNumber} Already Booked`
         })
     }
 
-    if(existingTable){
+    if (existingTable) {
         existingTable.booked = true;
-        existingTable.bookedBy= userID;
+        existingTable.bookedBy = userID;
         await existingTable.save();
 
         res.json({
             success: true,
-            message: `Table Booked Successfully`,
+            message: `Table ${tableNumber} Booked Successfully`,
             data: existingTable
         })
     }
 })
 
 //UnBook Table API
-app.post('/unBookTable', async (req, res)=>{
-    const {tableNumber} = req.body;
+app.post('/unBookTable', async (req, res) => {
+    const { tableNumber } = req.body;
 
     const existingTable = await Table.findOne({ tableNumber: tableNumber });
 
-    if(existingTable){
+    if (existingTable) {
         existingTable.booked = false;
         existingTable.bookedBy = null;
         await existingTable.save();
@@ -238,26 +244,26 @@ app.post('/unBookTable', async (req, res)=>{
 
     res.json({
         success: true,
-        message: `UnBook Table`,
+        message: `UnBook Table ${tableNumber} Successfully`,
         data: existingTable
     })
 })
 
 //Get Available Table API
-app.get('/availableTables', async (req, res)=>{
-    const availableTables = await Table.find({booked: false});
+app.get('/availableTables', async (req, res) => {
+    const availableTables = await Table.find({ booked: false });
 
 
     res.json({
         success: true,
-        message: `Available Table fetched Successfully`,
+        message: `Available Tables fetched Successfully`,
         data: availableTables
     })
 })
 
 //Order FoodItems API
-app.post('/orderFoodItems', async (req, res)=>{
-    const {userID, tableNumber, items} = req.body;
+app.post('/orderFoodItems', async (req, res) => {
+    const { userID, tableNumber, items } = req.body;
 
     const totalOrders = await Order.countDocuments();
 
@@ -280,10 +286,10 @@ app.post('/orderFoodItems', async (req, res)=>{
 })
 
 //Order API
-app.get('/order', async (req, res)=>{
-    const {orderID} = req.query;
+app.get('/order', async (req, res) => {
+    const { orderID } = req.query;
 
-    const order = await Order.findOne({orderID: orderID});
+    const order = await Order.findOne({ orderID: orderID });
 
     res.json({
         success: true,
@@ -293,10 +299,10 @@ app.get('/order', async (req, res)=>{
 })
 
 //Order By userID
-app.get('/ordersByUserID', async (req, res)=>{
-    const {userID} = req.query;
+app.get('/ordersByUserID', async (req, res) => {
+    const { userID } = req.query;
 
-    const orders = await Order.find({userID: userID});
+    const orders = await Order.find({ userID: userID });
 
     res.json({
         success: true,
