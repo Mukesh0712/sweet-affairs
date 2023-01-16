@@ -1,0 +1,14 @@
+.food-item-container{
+}
+
+.food-item-card{
+    border: 1px red solid;
+}
+
+.food-item-img-container{
+    border: 2px green solid;
+}
+
+.food-item-img{
+    width: 250px;
+}

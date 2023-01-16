@@ -4,7 +4,7 @@ import swal from 'sweetalert'
 
 import { currentUser } from './../../util/currentUser'
 import "./Login.css"
-import loginImg from "./../../images/Tasting-amico.png"
+import loginImg from "./../../images/Valentine's Day dinner-amico.png"
 
 function Login() {
 
@@ -47,10 +47,6 @@ function Login() {
         }
     }
 
-    async function signupBtn() {
-        window.location.href = './../Signup'
-    }
-
     return (
         <div className='login-container'>
 
@@ -73,11 +69,13 @@ function Login() {
                                 <div className='login-form-input-container'>
 
                                     <div className='login-form-input-box'>
+                                        <i class="fa-solid fa-envelope login-form-input-icon"></i>
                                         <input type='email' className='login-form-input' id='mail'
                                             placeholder='Email Address' value={email} onChange={(e) => { setEmail(e.target.value) }} />
                                     </div>
 
                                     <div className='login-form-input-box'>
+                                        <i class="fa-solid fa-lock login-form-input-icon"></i>
                                         <input type='password' className='login-form-input' id='password'
                                             placeholder='Password' value={password} onChange={(e) => { setPassword(e.target.value) }} />
                                     </div>
@@ -93,14 +91,14 @@ function Login() {
                                             <p className='login-form-forgot-pass'>Forgot your password?</p>
                                         </div>
                                     </div>
+
                                     <div className='login-form-button'>
                                         <button type='button' className='login-btn' onClick={loginUser}>LOGIN</button>
                                     </div>
 
                                     <div className='login-form-signup-btn'>
-                                        <button type='button' className='signup-btn' onClick={signupBtn}>Don't have an account? Sign up</button>
+                                        <button type='button' className='signup-btn'>Don't have an account? <a href='./../Signup'>Sign up</a></button>
                                     </div>
-
 
                                 </div>
 

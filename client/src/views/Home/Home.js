@@ -61,7 +61,7 @@ function Home() {
             </div>
 
             <div className='food-items-result'>
-                <div className='row'>
+                <div className='row food-items-row'>
                     {
                         currentFoodItems?.map((foodItem, index) => {
                             return (<FoodItemCard category={foodItem.category} description={foodItem.description}

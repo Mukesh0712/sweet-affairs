@@ -23,31 +23,32 @@ function FoodItemCard({ category, description, imgURL, price, title }) {
     }
 
     return (
-        <div className='col-md-3'>
-        
-            <div className='food-item-card'>
+        <div className='col-md-4 food-item-container'>
 
-                <div>
-                    <img alt='' src={imgURL} />
+            <div className='food-item-card row'>
+
+                <div className='food-item-img-container'>
+                    <img alt='' src={imgURL} className='food-item-img' />
                 </div>
 
-                <h2>{title}</h2>
+                <h4>{title}</h4>
+
                 <p>{description}</p>
-                <p>₹ {price} /- Only</p>
-                <span>{category}</span>
+
+                <h5>Price : {price}₹</h5>
 
                 <div>
-                    <span onClick={(e) => { setQuantity(quantity - 1) }}>-</span>
-                    <h2>{quantity}</h2>
-                    <span onClick={(e) => { setQuantity(quantity + 1) }}>+</span>
+                    <div>
+                        <span onClick={(e) => { setQuantity(quantity - 1) }}>-</span>
+                        <h2>{quantity}</h2>
+                        <span onClick={(e) => { setQuantity(quantity + 1) }}>+</span>
+                    </div>
+
+                    <div className='text-center'>
+                        <button type='button' className='btn-add-to-plate' onClick={addToPlate}>Add To Plate</button>
+                    </div>
                 </div>
-
             </div>
-
-            <div className='text-center'>
-                <button type='button' className='btn-add-to-plate' onClick={addToPlate}>Add To Plate</button>
-            </div>
-
         </div>
     )
 }

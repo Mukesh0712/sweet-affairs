@@ -26,17 +26,16 @@
     width: 100%;
     margin-left: auto;
     margin-right: auto;
-
 }
 
 .signup-form {
     border-radius: 10px;
     width: 85%;
-    height: 450px;
+    height: 460px;
     margin-left: auto;
     margin-right: auto;
     padding: 15px;
-    box-shadow: #989898 0px 0px 30px 2px;
+    box-shadow: #b4b4b4 0px 0px 20px 2px;
 }
 
 .signup-form-title {
@@ -71,13 +70,18 @@
     color: #252525;
 }
 
+.signup-form-input-icon{
+    font-size: 16px;
+    padding: 5px;
+}
+
 .signup-form-button {
     margin: 10px;
 }
 
 .register-btn {
     position: relative;
-    top: 8px;
+    top: 5px;
     border-radius: 20px;
     border: none;
     width: 50%;
@@ -88,9 +92,34 @@
     font-weight: 500;
     background: #407BFF;
     color: rgba(255, 255, 255, 0.837);
+    background-size: 300% 100%;
+    moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+    background-image: linear-gradient(to right, #25aae1, #4481eb, #04befe, #3f86ed);
+    box-shadow: 0 4px 15px 0 rgba(65, 132, 234, 0.75);
 }
 
 .register-btn:hover{
-    background: #3778be;
-    color: #fff;
+    background-position: 100% 0;
+    moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+
+.register-btn:focus {
+    outline: none;
+}
+
+.login-btn-bottom{
+    position: relative;
+    width: 90%;
+    top: -3px;
+    height: 36px;
+    font-size: 12px;
+    font-weight: 500;
+    background: transparent;
+    border: none;
 }

@@ -4,7 +4,7 @@ import swal from 'sweetalert'
 
 import { currentUser } from './../../util/currentUser'
 import "./Signup.css"
-import signupImg from "./../../images/Catering service.png"
+import signupImg from "./../../images/Tasting-amico.png"
 
 function Signup() {
 
@@ -77,21 +77,25 @@ function Signup() {
                                 <div className='signup-form-input-container'>
 
                                     <div className='signup-form-input-box'>
+                                        <i class="fa-solid fa-user signup-form-input-icon"></i>
                                         <input type='text' className='signup-form-input' id='name'
                                             placeholder='Full Name' value={name} onChange={(e) => { setName(e.target.value) }} />
                                     </div>
 
                                     <div className='signup-form-input-box'>
+                                        <i class="fa-solid fa-address-book signup-form-input-icon"></i>
                                         <input type='text' className='signup-form-input' id='phone'
                                             placeholder='Phone' value={phone} onChange={(e) => { setPhone(e.target.value) }} />
                                     </div>
 
                                     <div className='signup-form-input-box'>
+                                        <i class="fa-solid fa-envelope signup-form-input-icon"></i>
                                         <input type='email' className='signup-form-input' id='mail'
                                             placeholder='Email Address' value={email} onChange={(e) => { setEmail(e.target.value) }} />
                                     </div>
 
                                     <div className='signup-form-input-box'>
+                                        <i class="fa-solid fa-lock signup-form-input-icon"></i>
                                         <input type='password' className='signup-form-input' id='password'
                                             placeholder='Password' value={password} onChange={(e) => { setPassword(e.target.value) }} />
                                     </div>
@@ -106,6 +110,10 @@ function Signup() {
 
                                     <div className='signup-form-button'>
                                         <button type='button' className='register-btn' onClick={signupUser}>SIGN UP</button>
+                                    </div>
+
+                                    <div className='signup-form-login-btn'>
+                                        <button type='button' className='login-btn-bottom'>Already have an account? <a href='./../Login'>Login</a></button>
                                     </div>
 
                                 </div>
