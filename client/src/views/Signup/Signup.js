@@ -105,7 +105,7 @@ function Signup() {
                                             <input type="checkbox" checked="checkbox" name="remember" /> Remember me
                                         </label>
 
-                                        <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
+                                        <p>By creating an account you agree to our <a href="./../Signup">Terms & Privacy</a>.</p>
                                     </div>
 
                                     <div className='signup-form-button'>
