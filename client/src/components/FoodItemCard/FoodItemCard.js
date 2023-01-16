@@ -40,6 +40,18 @@ function FoodItemCard({ category, description, imgURL, price, title }) {
                         <p>{description}</p>
                     </div>
 
+                    <div className='food-item-card-category-quantity'>
+                        <div className='food-item-card-category'>
+                            <p>{category}</p>
+                        </div>
+
+                        <div className='food-item-card-quantity'>
+                            <span onClick={(e) => { setQuantity(quantity - 1) }} className='food-item-card-quantity-inc-dec hover-red'><i class="fa-solid fa-minus"></i></span>
+                            <button type='search' className='food-item-card-quantity-num'>{quantity}</button>
+                            <span onClick={(e) => { setQuantity(quantity + 1) }} className='food-item-card-quantity-inc-dec hover-green'><i class="fa-solid fa-plus"></i></span>
+                        </div>
+                    </div>
+
                     <div className='food-item-card-price-btn'>
                         <div className='food-item-card-price'>
                             <p>Price : {price}₹ </p>
@@ -49,14 +61,6 @@ function FoodItemCard({ category, description, imgURL, price, title }) {
                             <button type='button' className='food-item-card-btn-add' onClick={addToPlate}>Add To Plate</button>
                         </div>
                     </div>
-
-                    {/*
-                    <div className='food-item-card-quantity'>
-                        <span onClick={(e) => { setQuantity(quantity - 1) }} className='food-item-card-quantity-inc-dec'><i class="fa-solid fa-minus"></i></span>
-                        <button type='search' className='food-item-card-quantity-num'>{quantity}</button>
-                        <span onClick={(e) => { setQuantity(quantity + 1) }} className='food-item-card-quantity-inc-dec'><i class="fa-solid fa-plus"></i></span>
-                    </div>
-                    */}
 
                 </div>
             </div>
