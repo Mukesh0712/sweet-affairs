@@ -35,7 +35,7 @@ app.post('/signup', async (req, res) => {
     if (emptyFields.length > 0) {
         return res.json({
             success: false,
-            message: `${emptyFields.join(', ')} are required`
+            message: `${emptyFields.join(' , ')} are required`
         })
     }
 
