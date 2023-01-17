@@ -35,7 +35,7 @@ app.post('/signup', async (req, res) => {
     if (emptyFields.length > 0) {
         return res.json({
             success: false,
-            message: `${emptyFields.join(' , ')} are required`
+            message: `${emptyFields.join(' , ')} are Required`
         })
     }
 
@@ -83,17 +83,10 @@ app.post('/login', async (req, res) => {
     const { email, password } = req.body;
 
     //validation to check if email or password fields are not filled
-    if (!email) {
+    if (!email || !password) {
         return res.json({
             success: false,
-            message: `Email is Required !`
-        })
-    }
-
-    if (!password) {
-        return res.json({
-            success: false,
-            message: `Password is Required !`
+            message: `Email and Password is Required !`
         })
     }
 
@@ -119,6 +112,22 @@ app.post('/login', async (req, res) => {
 app.post('/foodItem', async (req, res) => {
     const { title, description, imgURL, price, category } = req.body;
 
+    //validation to check all fields are filled
+    const emptyFields = []
+
+    if (!title) emptyFields.push('Title')
+    if (!description) emptyFields.push('Description')
+    if (!imgURL) emptyFields.push('ImgURL')
+    if (!price) emptyFields.push('Price')
+    if (!category) emptyFields.push('Category')
+
+    if (emptyFields.length > 0) {
+        return res.json({
+            success: false,
+            message: `${emptyFields.join(' , ')} are Required`
+        })
+    }
+
     const foodItem = new FoodItem({
         title: title,
         description: description,
@@ -140,6 +149,13 @@ app.post('/foodItem', async (req, res) => {
 app.get('/foodItemByCategory', async (req, res) => {
     const { category } = req.query;
 
+    if (!category) {
+        res.json({
+            success: false,
+            message: `Category is Required`,
+        })
+    }
+
     const foodItems = await FoodItem.find({
         category: { $regex: category, $options: 'i' }
     })
@@ -154,6 +170,13 @@ app.get('/foodItemByCategory', async (req, res) => {
 //Search FoodItem by Title
 app.get('/foodItemByTitle', async (req, res) => {
     const { title } = req.query;
+
+    if (!title) {
+        res.json({
+            success: false,
+            message: `Title is Required`,
+        })
+    }
 
     const foodItems = await FoodItem.find({
         title: { $regex: title, $options: 'i' }
@@ -170,16 +193,31 @@ app.get('/foodItemByTitle', async (req, res) => {
 app.get('/allFoodItems', async (req, res) => {
     const foodItems = await FoodItem.find()
 
-    res.json({
-        success: true,
-        message: `Food Items Fetched Successfully`,
-        data: foodItems
-    })
+    if (!foodItems) {
+        res.json({
+            success: false,
+            message: `Food Items Not Found !`,
+        })
+    }
+    else {
+        res.json({
+            success: true,
+            message: `Food Items Fetched Successfully`,
+            data: foodItems
+        })
+    }
 })
 
 //Create Table API
 app.post('/createTable', async (req, res) => {
     const { tableNumber } = req.body;
+
+    if (!tableNumber) {
+        res.json({
+            success: false,
+            message: `Please Enter Table Number!`,
+        })
+    }
 
     const existingTable = await Table.findOne({ tableNumber: tableNumber });
 
@@ -208,6 +246,13 @@ app.post('/createTable', async (req, res) => {
 app.post('/bookTable', async (req, res) => {
     const { tableNumber, userID } = req.body;
 
+    if (!tableNumber || !userID) {
+        return res.json({
+            success: false,
+            message: `Tablenumber and Userid is Required`
+        })
+    }
+
     const existingTable = await Table.findOne({ tableNumber: tableNumber });
 
     if (existingTable && existingTable.booked) {
@@ -234,6 +279,13 @@ app.post('/bookTable', async (req, res) => {
 app.post('/unBookTable', async (req, res) => {
     const { tableNumber } = req.body;
 
+    if (!tableNumber) {
+        res.json({
+            success: false,
+            message: `Please Enter Table Number!`,
+        })
+    }
+
     const existingTable = await Table.findOne({ tableNumber: tableNumber });
 
     if (existingTable) {
@@ -253,17 +305,37 @@ app.post('/unBookTable', async (req, res) => {
 app.get('/availableTables', async (req, res) => {
     const availableTables = await Table.find({ booked: false });
 
-
-    res.json({
-        success: true,
-        message: `Available Tables fetched Successfully`,
-        data: availableTables
-    })
+    if (!availableTables) {
+        res.json({
+            success: false,
+            message: `Not Available!`
+        })
+    }
+    else {
+        res.json({
+            success: true,
+            message: `Available Tables fetched Successfully`,
+            data: availableTables
+        })
+    }
 })
 
 //Order FoodItems API
 app.post('/orderFoodItems', async (req, res) => {
     const { userID, tableNumber, items } = req.body;
+
+    const emptyFields = []
+
+    if(!userID) emptyFields.push('UserID')
+    if(!tableNumber) emptyFields.push('TableNumber')
+    if(!items) emptyFields.push('Items')
+
+    if(emptyFields.length > 0){
+        res.json({
+            success: false,
+            message: `${emptyFields.join(' , ')} is Required`,
+        })    
+    }
 
     const totalOrders = await Order.countDocuments();
 
@@ -289,6 +361,13 @@ app.post('/orderFoodItems', async (req, res) => {
 app.get('/order', async (req, res) => {
     const { orderID } = req.query;
 
+    if(!orderID){
+        res.json({
+            success: false,
+            message: `OrderID is Required`,
+        })    
+    }
+
     const order = await Order.findOne({ orderID: orderID });
 
     res.json({
@@ -301,6 +380,13 @@ app.get('/order', async (req, res) => {
 //Order By userID
 app.get('/ordersByUserID', async (req, res) => {
     const { userID } = req.query;
+
+    if(!userID){
+        res.json({
+            success: false,
+            message: `UserID is Required`,
+        })    
+    }
 
     const orders = await Order.find({ userID: userID });
 
