@@ -22,6 +22,19 @@ function FoodItemCard({ category, description, imgURL, price, title }) {
         localStorage.setItem('plate', JSON.stringify(existingPlate))
     }
 
+    function decrement(){
+
+        let value = 0
+        if(quantity <= value){
+            value = 1
+        }
+        else
+        {
+            value = quantity
+        }
+        setQuantity(value - 1)
+    }
+
     return (
         <div className='col-md-3 food-item-container'>
 
@@ -46,7 +59,7 @@ function FoodItemCard({ category, description, imgURL, price, title }) {
                         </div>
 
                         <div className='food-item-card-quantity'>
-                            <span onClick={(e) => { setQuantity(quantity - 1) }} className='food-item-card-quantity-inc-dec hover-red'><i class="fa-solid fa-minus"></i></span>
+                            <span onClick={() => { decrement() }} className='food-item-card-quantity-inc-dec hover-red'><i class="fa-solid fa-minus"></i></span>
                             <button type='search' className='food-item-card-quantity-num'>{quantity}</button>
                             <span onClick={(e) => { setQuantity(quantity + 1) }} className='food-item-card-quantity-inc-dec hover-green'><i class="fa-solid fa-plus"></i></span>
                         </div>
