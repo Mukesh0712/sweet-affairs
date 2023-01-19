@@ -1,11 +1,6 @@
 {
     "cSpell.words": [
-        "Booktable",
-        "myorders",
-        "swal",
-        "sweetalert",
-        "Tablenumber",
-        "Userid"
-    ],
-    "favorites.sortOrder": "DESC"
+        "booktable",
+        "myorders"
+    ]
 }

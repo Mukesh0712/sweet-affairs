@@ -3,9 +3,10 @@ import axios from "axios"
 import swal from 'sweetalert'
 import "./Home.css"
 import FoodItemCard from "./../../components/FoodItemCard/FoodItemCard"
+import Navbar from '../../components/Navbar/Navbar'
 
 import { loginRequired } from '../../util/loginRequired'
-import Navbar from '../../components/Navbar/Navbar'
+import { currentUser } from '../../util/currentUser'
 
 
 function Home() {
@@ -42,7 +43,7 @@ function Home() {
 
     return (
         <div>
-            <Navbar />
+            <Navbar user={currentUser?.name} />
 
             <div className='search-container text-center'>
                 <input type='text' placeholder='Search' className='fs-4'

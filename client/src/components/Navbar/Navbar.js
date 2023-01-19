@@ -1,11 +1,15 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { currentUser } from '../../util/currentUser'
 import swal from 'sweetalert'
 import "./Navbar.css"
+import { myFoodPlateCount } from '../../util/myPlate'
+import { Link} from "react-router-dom"
 
 
-function Navbar() {
-    
+function Navbar({ user }) {
+
+    const [foodItemCount, setFoodItemCount] = useState(myFoodPlateCount)
+
     async function logOut() {
         localStorage.removeItem('currentUser')
         await swal({
@@ -20,7 +24,7 @@ function Navbar() {
     return (
         <div>
             <nav class="navbar navbar-expand-lg bg-body-tertiary">
-            
+
                 <div class="container-fluid">
 
                     <a class="navbar-brand" href="./../Navbar">Sweet Affairs</a>
@@ -65,18 +69,16 @@ function Navbar() {
 
                         </ul>
 
-                        <form class="d-flex" role="search">
+                        <h5 className='username'>Hello {currentUser?.name}</h5>
 
-                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-                            <button class="btn btn-outline-success" type="submit">Search</button>
-
-                        </form>
+                        <button type="button" class="btn btn-primary">
+                            <Link to="/myPlate">
+                                <i class="fa-solid fa-plate-wheat text-white"></i>
+                                <span class="badge text-bg-danger ms-2">{foodItemCount}</span>
+                            </Link>
+                        </button>
 
                         <button type='button' className='btn btn-danger ms-3' onClick={logOut}>Logout</button>
-
-                        <h5 className='username'>{currentUser?.name}</h5>
-
-                        <h5 className='plate'><i class="fa-solid fa-plate-wheat"></i></h5>
 
                     </div>
                 </div>

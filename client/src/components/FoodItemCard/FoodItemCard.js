@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import swal from 'sweetalert'
 
 import "./FoodItemCard.css"
 
@@ -20,6 +21,14 @@ function FoodItemCard({ category, description, imgURL, price, title }) {
         existingPlate.push(plateObject)
 
         localStorage.setItem('plate', JSON.stringify(existingPlate))  
+
+        await swal ({
+            title: "Added to Plate",
+            icon: "success",
+        })
+
+        window.location.reload()
+
     }
 
     function decrement(){
