@@ -6,5 +6,6 @@
         "sweetalert",
         "Tablenumber",
         "Userid"
-    ]
+    ],
+    "favorites.sortOrder": "DESC"
 }

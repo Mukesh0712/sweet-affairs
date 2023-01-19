@@ -4,8 +4,8 @@ import swal from 'sweetalert'
 import "./Home.css"
 import FoodItemCard from "./../../components/FoodItemCard/FoodItemCard"
 
-import { currentUser } from '../../util/currentUser'
 import { loginRequired } from '../../util/loginRequired'
+import Navbar from '../../components/Navbar/Navbar'
 
 
 function Home() {
@@ -36,25 +36,13 @@ function Home() {
         }
     }, [searchText])
 
-    async function logOut() {
-        localStorage.removeItem('currentUser')
-        await swal({
-            icon: 'success',
-            title: "Success",
-            text: "Logout Successfully",
-            button: "Ok!"
-        })
-        window.location.href = '/login'
-    }
-
-    useEffect(() =>{
-            loginRequired()
+    useEffect(() => {
+        loginRequired()
     }, [])
 
     return (
         <div>
-            <h1 className='text-center'>Home</h1>
-            <h2>{currentUser?.name}</h2>
+            <Navbar />
 
             <div className='search-container text-center'>
                 <input type='text' placeholder='Search' className='fs-4'
@@ -72,7 +60,6 @@ function Home() {
                 </div>
             </div>
 
-            <button type='button' className='btn btn-danger' onClick={logOut}>Logout</button>
         </div>
     )
 }

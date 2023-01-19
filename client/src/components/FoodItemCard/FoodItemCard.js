@@ -19,7 +19,7 @@ function FoodItemCard({ category, description, imgURL, price, title }) {
 
         existingPlate.push(plateObject)
 
-        localStorage.setItem('plate', JSON.stringify(existingPlate))
+        localStorage.setItem('plate', JSON.stringify(existingPlate))  
     }
 
     function decrement(){
@@ -47,8 +47,9 @@ function FoodItemCard({ category, description, imgURL, price, title }) {
                 <div className='food-item-card-details-container'>
                     <div className='food-item-card-text'>
                         <p>{title}</p>
+                        <hr/>
                     </div>
-
+                    
                     <div className='food-item-card-desc'>
                         <p>{description}</p>
                     </div>
