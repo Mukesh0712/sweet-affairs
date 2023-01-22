@@ -1,0 +1,26 @@
+.container{
+    width: 25%;
+    margin: 20px;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 0px 10px 0 rgba(65, 132, 234, 0.75);
+}
+
+.container:hover{
+    box-shadow: 0 0px 12px 0 rgb(27, 103, 218);
+}
+
+.confirm-btn{
+    width: 50%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 5px;
+}
+
+.button{
+    color: #454545 ;
+}
+.button:hover{
+    color: black;
+}
