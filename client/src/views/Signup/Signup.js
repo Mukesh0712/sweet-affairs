@@ -5,6 +5,8 @@ import swal from 'sweetalert'
 import { currentUser } from './../../util/currentUser'
 import "./Signup.css"
 import signupImg from "./../../images/Tasting-amico.png"
+import { Link } from "react-router-dom"
+
 
 function Signup() {
 
@@ -105,7 +107,7 @@ function Signup() {
                                             <input type="checkbox" checked="checkbox" name="remember" /> Remember me
                                         </label>
 
-                                        <p>By creating an account you agree to our <a href="./../Signup">Terms & Privacy</a>.</p>
+                                        <p>By creating an account you agree to our <Link to="/signup">Terms & Privacy</Link>.</p>
                                     </div>
 
                                     <div className='signup-form-button'>
@@ -113,7 +115,7 @@ function Signup() {
                                     </div>
 
                                     <div className='signup-form-login-btn'>
-                                        <button type='button' className='login-btn-bottom'>Already have an account? <a href='./../Login'>Login</a></button>
+                                        <button type='button' className='login-btn-bottom'>Already have an account? <Link to='/login'>Login</Link></button>
                                     </div>
 
                                 </div>

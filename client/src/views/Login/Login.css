@@ -5,18 +5,12 @@
 
 .login-row {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
-    margin-top: 20px;
+    margin-top: 30px;
 }
 
-.login-col-1 {
-    width: 450px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.login-col-2 {
+.login-col {
     width: 500px;
     margin-left: auto;
     margin-right: auto;
@@ -24,17 +18,17 @@
 
 .login-img {
     width: 90%;
+    display: block;
     margin-left: auto;
     margin-right: auto;
 }
 
 .login-form {
     border-radius: 10px;
-    width: 75%;
-    height: 340px;
+    width: 80%;
+    height: 350px;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 30px;
     padding: 15px;
     box-shadow: #b4b4b4 0px 0px 20px 2px;
 }
@@ -43,11 +37,11 @@
     text-align: center;
 }
 
-.login-form-title h2{
+.login-form-title h2 {
     color: #407BFF;
 }
 
-.login-form-input-container{
+.login-form-input-container {
     text-align: center;
 }
 
@@ -67,41 +61,43 @@
     background: transparent;
 }
 
-.login-form-input::placeholder{
+.login-form-input::placeholder {
     color: #252525;
 }
 
-.login-form-input-icon{
+.login-form-input-icon {
     font-size: 16px;
     padding: 5px;
+    position: relative;
 }
 
-.login-form-checkbox-forgot-btn{
-    margin: 10px;
-    padding-top: 5px;
+.login-form-checkbox-forgot-btn {
+    width: 70%;
+    margin: 15px;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.login-form-checkbox{
-    width: 130px;
+.login-form-checkbox {
+    width: 100px;
     font-size: 12px;
 }
 
-.login-form-forgot{
+.login-form-forgot {
     width: 150px;
-    padding-right: 10px;    
     font-size: 12px;
 }
 
-.login-form-forgot-pass{
+.login-form-forgot-pass {
     font-size: 12px;
     cursor: pointer;
 }
 
 .login-btn {
     position: relative;
-    top: 8px;
+    top: 5px;
     border-radius: 20px;
     border: none;
     width: 40%;
@@ -121,7 +117,7 @@
     box-shadow: 0 4px 15px 0 rgba(65, 132, 234, 0.75);
 }
 
-.login-btn:hover{
+.login-btn:hover {
     background-position: 100% 0;
     moz-transition: all .4s ease-in-out;
     -o-transition: all .4s ease-in-out;
@@ -129,11 +125,11 @@
     transition: all .4s ease-in-out;
 }
 
-.login-btn:focus{
+.login-btn:focus {
     outline: none;
 }
 
-.signup-btn{
+.signup-btn {
     position: relative;
     top: 20px;
     width: 90%;

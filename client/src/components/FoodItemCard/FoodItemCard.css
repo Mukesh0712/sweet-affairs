@@ -98,7 +98,7 @@
     -o-transition: all .4s ease-in-out;
     -webkit-transition: all .4s ease-in-out;
     transition: all .4s ease-in-out;
-    background-image: linear-gradient(to right, #f90404, #e72d14, #ff3e2d, #ff0000);
+    background-image: linear-gradient(to right, #f99797, #f4998d, #f98075, #bd8a8a);
 }
 
 .hover-green{
@@ -112,7 +112,7 @@
     -o-transition: all .4s ease-in-out;
     -webkit-transition: all .4s ease-in-out;
     transition: all .4s ease-in-out;
-    background-image: linear-gradient(to right, #2be125, #44eb95, #2afe04, #3fed93);
+    background-image: linear-gradient(to right, #8dea8a, #7cecb2, #97e789, #82eeb6);
 }
 
 .food-item-card-quantity-num {

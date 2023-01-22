@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react'
 import axios from "axios"
 import swal from 'sweetalert'
-
 import { currentUser } from './../../util/currentUser'
 import "./Login.css"
 import loginImg from "./../../images/Valentine's Day dinner-amico.png"
+import { Link } from "react-router-dom"
 
 function Login() {
 
@@ -52,11 +52,11 @@ function Login() {
 
             <div className='row login-row'>
 
-                <div className='col-md-6 login-col-1'>
-                    <div><img alt='login-img' src={loginImg} className='login-img' /></div>
+                <div className='col-md-6 login-col'>
+                    <img alt='login-img' src={loginImg} className='login-img' />
                 </div>
 
-                <div className='col-md-6 login-col-2'>
+                <div className='col-md-6 login-col'>
                     <div className='form-container'>
                         <form>
                             <div className='form-group login-form'>
@@ -97,7 +97,7 @@ function Login() {
                                     </div>
 
                                     <div className='login-form-signup-btn'>
-                                        <button type='button' className='signup-btn'>Don't have an account? <a href='./../Signup'>Sign up</a></button>
+                                        <button type='button' className='signup-btn'>Don't have an account? <Link to='/signup'>Sign up</Link></button>
                                     </div>
 
                                 </div>

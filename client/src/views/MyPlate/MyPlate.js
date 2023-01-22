@@ -1,7 +1,6 @@
 import React from 'react'
 import "./MyPlate.css"
 import Navbar from '../../components/Navbar/Navbar'
-
 import { myFoodPlateItems } from "./../../util/myPlate"
 
 function MyPlate() {

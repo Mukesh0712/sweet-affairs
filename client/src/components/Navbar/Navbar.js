@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
-import { currentUser } from '../../util/currentUser'
 import swal from 'sweetalert'
 import "./Navbar.css"
+import { currentUser } from '../../util/currentUser'
 import { myFoodPlateCount } from '../../util/myPlate'
-import { Link} from "react-router-dom"
+import { Link } from "react-router-dom"
 
 
 function Navbar({ user }) {
@@ -27,7 +27,8 @@ function Navbar({ user }) {
 
                 <div class="container-fluid">
 
-                    <a class="navbar-brand" href="./../Navbar">Sweet Affairs</a>
+                    <img src='logo.png' alt='' className='logo' />
+                    <Link class="navbar-brand" to="/">Sweet Affairs</Link>
 
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
@@ -38,31 +39,31 @@ function Navbar({ user }) {
                         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
 
                             <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="./../Navbar">Home</a>
+                                <Link class="nav-link active" aria-current="page" to="/">Home</Link>
                             </li>
 
                             <li class="nav-item">
-                                <a class="nav-link active" href="./../Navbar">About</a>
+                                <Link class="nav-link active" to="/">About</Link>
                             </li>
 
                             <li class="nav-item">
-                                <a class="nav-link active" href="./../Navbar">Contact</a>
+                                <Link class="nav-link active" to="/">Contact</Link>
                             </li>
 
                             <li class="nav-item dropdown">
 
-                                <a class="nav-link dropdown-toggle" href="./../Navba./../Navbar" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <Link class="nav-link active dropdown-toggle" to='/' role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                     Menu
-                                </a>
+                                </Link>
 
                                 <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="./../Navbar">Chicken</a></li>
-                                    <li><a class="dropdown-item" href="./../Navbar">Fish</a></li>
-                                    <li><a class="dropdown-item" href="./../Navbar">Egg</a></li>
-                                    <li><a class="dropdown-item" href="./../Navbar">Burger</a></li>
-                                    <li><a class="dropdown-item" href="./../Navbar">Pizza</a></li>
+                                    <li><Link class="dropdown-item" to="/">Chicken</Link></li>
+                                    <li><Link class="dropdown-item" to="/">Fish</Link></li>
+                                    <li><Link class="dropdown-item" to="/">Egg</Link></li>
+                                    <li><Link class="dropdown-item" to="/">Burger</Link></li>
+                                    <li><Link class="dropdown-item" to="/">Pizza</Link></li>
                                     <li><hr class="dropdown-divider" /></li>
-                                    <li><a class="dropdown-item" href="./../Navbar">View More</a></li>
+                                    <li><Link class="dropdown-item" to="/">View More</Link></li>
                                 </ul>
 
                             </li>

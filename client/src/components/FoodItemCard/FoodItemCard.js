@@ -84,7 +84,6 @@ function FoodItemCard({ category, description, imgURL, price, title }) {
                             <button type='button' className='food-item-card-btn-add' onClick={addToPlate}>Add To Plate</button>
                         </div>
                     </div>
-
                 </div>
             </div>
         </div>
