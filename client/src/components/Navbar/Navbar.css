@@ -1,14 +1,18 @@
-.username{
+.username {
     margin: 5px;
     cursor: pointer;
 }
 
-.plate{
+.plate {
     margin: 5px;
     cursor: pointer;
 }
 
-.logo{
+.logo {
     width: 20px;
     margin: 5px;
+}
+
+.nav-bg {
+    background-color: #407BFF;
 }

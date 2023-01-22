@@ -23,11 +23,11 @@ function Navbar({ user }) {
 
     return (
         <div>
-            <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <nav class="navbar navbar-expand-lg nav-bg mb-3">
 
                 <div class="container-fluid">
 
-                    <img src='logo.png' alt='' className='logo' />
+                    <Link to="/"><img src='logo.png' alt='' className='logo' /></Link>
                     <Link class="navbar-brand" to="/">Sweet Affairs</Link>
 
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -72,10 +72,10 @@ function Navbar({ user }) {
 
                         <h5 className='username'>Hello {currentUser?.name}</h5>
 
-                        <button type="button" class="btn btn-primary">
+                        <button type="button" class="btn btn-warning position-relative me-2 mt-1">
                             <Link to="/myPlate">
-                                <i class="fa-solid fa-plate-wheat text-white"></i>
-                                <span class="badge text-bg-danger ms-2">{foodItemCount}</span>
+                                <i class="fa-solid fa-plate-wheat text-dark"></i>
+                                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-secondary">{foodItemCount}</span>
                             </Link>
                         </button>
 
