@@ -71,18 +71,9 @@
     position: relative;
 }
 
-.login-form-checkbox-forgot-btn {
-    width: 70%;
+.login-form-forgot-btn {
     margin: 15px;
-    display: flex;
-    justify-content: space-evenly;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.login-form-checkbox {
-    width: 100px;
-    font-size: 12px;
+    text-align: center;
 }
 
 .login-form-forgot {

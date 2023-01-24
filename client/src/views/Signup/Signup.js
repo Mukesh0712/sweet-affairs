@@ -6,7 +6,7 @@ import { currentUser } from './../../util/currentUser'
 import "./Signup.css"
 import signupImg from "./../../images/Tasting-amico.png"
 import { Link } from "react-router-dom"
-
+import Navbar from '../../components/Navbar/Navbar'
 
 function Signup() {
 
@@ -58,6 +58,8 @@ function Signup() {
 
     return (
         <div className='signup-container'>
+
+            <Navbar />
 
             <div className='row signup-row'>
 

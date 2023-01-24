@@ -5,6 +5,7 @@ import { currentUser } from './../../util/currentUser'
 import "./Login.css"
 import loginImg from "./../../images/Valentine's Day dinner-amico.png"
 import { Link } from "react-router-dom"
+import Navbar from '../../components/Navbar/Navbar'
 
 function Login() {
 
@@ -50,6 +51,8 @@ function Login() {
     return (
         <div className='login-container'>
 
+            <Navbar/>
+
             <div className='row login-row'>
 
                 <div className='col-md-6 login-col'>
@@ -80,13 +83,7 @@ function Login() {
                                             placeholder='Password' value={password} onChange={(e) => { setPassword(e.target.value) }} />
                                     </div>
 
-                                    <div className='login-form-checkbox-forgot-btn'>
-                                        <div className='login-form-checkbox'>
-                                            <label>
-                                                <input type="checkbox" checked="checkbox" name="remember" /> Remember me
-                                            </label>
-                                        </div>
-
+                                    <div className='login-form-forgot-btn'>
                                         <div className='login-form-forgot'>
                                             <p className='login-form-forgot-pass'>Forgot your password?</p>
                                         </div>
