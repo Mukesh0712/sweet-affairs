@@ -246,13 +246,6 @@ app.post('/createTable', async (req, res) => {
 app.post('/bookTable', async (req, res) => {
     const { tableNumber, userID } = req.body;
 
-    if (!tableNumber || !userID) {
-        return res.json({
-            success: false,
-            message: `Tablenumber and Userid is Required`
-        })
-    }
-
     const existingTable = await Table.findOne({ tableNumber: tableNumber });
 
     if (existingTable && existingTable.booked) {

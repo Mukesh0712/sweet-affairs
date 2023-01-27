@@ -1,16 +1,63 @@
 .tables{
-    display: flex;
-    justify-content: space-evenly;
-    flex-direction: row;
-    flex-wrap: wrap;
 }
 
-.table{
+.avl-table{
+    text-align: center;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.table-name{
     border: 3px gray solid;
     border-radius: 10px;
     box-shadow: 0 0 5px 2px gainsboro;
-    width: 15%;
-    margin: 20px;
+    width: 75%;
+    height: max-content;
     padding: 10px;
     text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.table-img{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.book-btn{
+    display: flex;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 7px;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    color: rgba(255, 255, 255, 0.837);
+    background: #407BFF;
+    background-size: 300% 100%;
+    moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+    background-image: linear-gradient(to right, #25aae1, #4481eb, #04befe, #3f86ed);
+    outline: none;
+}
+
+.book-btn:hover{
+    background-position: 100% 0;
+    moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
 }
