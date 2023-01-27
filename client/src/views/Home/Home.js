@@ -12,6 +12,7 @@ function Home() {
     const [searchText, setSearchText] = useState("")
     const [currentFoodItems, setCurrentFoodItems] = useState([])
 
+
     async function fetchAllItems() {
         console.log("Fetching All Items");
         const response = await axios.get('/allFoodItems')

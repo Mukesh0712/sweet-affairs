@@ -4,7 +4,7 @@ import "./Navbar.css"
 import { currentUser } from '../../util/currentUser'
 import { myFoodPlateCount } from '../../util/myPlate'
 import { Link } from "react-router-dom"
-
+import Table from '../../views/Table/Table'
 
 function Navbar({ user }) {
 
@@ -48,6 +48,10 @@ function Navbar({ user }) {
 
                             <li class="nav-item">
                                 <Link class="nav-link active" to="/">Contact</Link>
+                            </li>
+
+                            <li class="nav-item">
+                                <Link class="nav-link active" to="/tables">Tables</Link>
                             </li>
 
                             <li class="nav-item dropdown">

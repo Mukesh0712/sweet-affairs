@@ -10,16 +10,17 @@ function MyPlate() {
 
     async function placeFoodOrder() {
         const response = await axios.post("/orderFoodItems", {
-            userID: currentUser.id,
+            userID: currentUser._id,
             tableNumber: localStorage.getItem("tableNumber") || 1,
             items: myFoodPlateItems
         })
-
+        
         if (response.data.success) {
             await swal("Order Placed", response.data.message, "success")
             localStorage.removeItem("plate")
             window.location.href = "/"
         }
+
     }
 
     return (
@@ -51,7 +52,7 @@ function MyPlate() {
 
                             </div>
                         )
-                        
+
                     })
                 }
             </div>
