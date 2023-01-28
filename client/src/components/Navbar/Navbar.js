@@ -8,9 +8,9 @@ import { Link } from "react-router-dom"
 function Navbar({ user }) {
 
     const [foodItemCount, setFoodItemCount] = useState(myFoodPlateCount)
-    
+
     async function logOut() {
-        if(currentUser){
+        if (currentUser) {
             localStorage.removeItem('currentUser')
             localStorage.removeItem('plate')
             await swal({
@@ -20,7 +20,7 @@ function Navbar({ user }) {
                 button: "Ok!"
             })
             window.location.href = '/login'
-    
+
         }
     }
 
@@ -30,8 +30,7 @@ function Navbar({ user }) {
 
                 <div class="container-fluid">
 
-                    <Link to="/"><img src='logo.png' alt='' className='logo' /></Link>
-                    <Link class="navbar-brand" to="/">Sweet Affairs</Link>
+                    <Link class="navbar-brand ms-2" to="/">SWEET AFFAIRS</Link>
 
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
@@ -39,40 +38,46 @@ function Navbar({ user }) {
 
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
 
-                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <ul class="navbar-nav me-0 mb-2 mt-2 mb-lg-0 ms-auto pt-2 ">
 
-                            <li class="nav-item">
-                                <Link class="nav-link active" aria-current="page" to="/">Home</Link>
+                            <li class="nav-item me-4">
+                                <Link class="nav-link active" aria-current="page" to="/">HOME</Link>
                             </li>
 
-                            <li class="nav-item">
-                                <Link class="nav-link active" to="/">About</Link>
+                            <li class="nav-item me-4">
+                                <Link class="nav-link active" to="/">ABOUT</Link>
                             </li>
 
-                            <li class="nav-item">
-                                <Link class="nav-link active" to="/">Contact</Link>
+                            <li class="nav-item me-4">
+                                <Link class="nav-link active" to='/menu' role="button" >MENU</Link>
                             </li>
 
-                            <li class="nav-item">
-                                <Link class="nav-link active" to="/tables">Tables</Link>
+                            <li class="nav-item me-4">
+                                <Link class="nav-link active" to="/tables">TABLES</Link>
                             </li>
 
-                            <li class="nav-item dropdown">
-                                <Link class="nav-link active" to='/menu' role="button" >Menu</Link>
+                            <li class="nav-item me-4">
+                                <Link class="nav-link active" to="/">CONTACT</Link>
+                            </li>
+
+                            <li class="nav-item me-4">
+                                <p className='username nav-link'>Welcome, {currentUser?.name}</p>
+                            </li>
+
+                            <li class="nav-item me-4">
+                                <button type='button' className='btn logout-btn text-white fw-bold' onClick={logOut}>LOG OUT</button>
+                            </li>
+
+                            <li class="nav-item me-4">
+                                <button type="button" class="btn position-relative">
+                                    <Link to="/myPlate">
+                                        <i class="fa-solid fa-cart-shopping text-black"></i>
+                                        <span class="nav-link active position-absolute mt-2 top-0 start-100 translate-middle badge rounded-pill badge-bg text-white fw-bold">{foodItemCount}</span>
+                                    </Link>
+                                </button>
                             </li>
 
                         </ul>
-
-                        <h5 className='username'>Hello {currentUser?.name}</h5>
-
-                        <button type="button" class="btn btn-warning position-relative me-2 mt-1">
-                            <Link to="/myPlate">
-                                <i class="fa-solid fa-plate-wheat text-dark"></i>
-                                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-secondary">{foodItemCount}</span>
-                            </Link>
-                        </button>
-
-                        <button type='button' className='btn btn-danger ms-3' onClick={logOut}>Logout</button>
 
                     </div>
                 </div>

@@ -1,18 +1,27 @@
-.username {
-    margin: 5px;
-    cursor: pointer;
-}
-
-.plate {
-    margin: 5px;
-    cursor: pointer;
-}
-
-.logo {
-    width: 20px;
-    margin: 5px;
-}
-
 .nav-bg {
-    background-color: #407BFF;
+    background: rgba(215, 214, 214, 0.179);
+    height: 40px;
+    box-shadow: 0 0 3px 2px rgba(215, 214, 214, 0.769);
+}
+
+.logout-btn{
+    background-size: 300% 100%;
+    moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+    background-image: linear-gradient(to right, #25aae1, #4481eb, #04befe, #3f86ed);
+    outline: none;
+}
+
+.logout-btn:hover{
+    background-position: 100% 0;
+    moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+
+.badge-bg{
+    background-color: #699ae3;
 }

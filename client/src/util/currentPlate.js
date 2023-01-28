@@ -1,0 +1,1 @@
+export const currentPlate = JSON.parse(localStorage.getItem('plate')) || null;

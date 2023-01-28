@@ -6,6 +6,8 @@ import Navbar from '../../components/Navbar/Navbar'
 import { currentUser } from '../../util/currentUser'
 import { loginRequired } from '../../util/loginRequired'
 import { myFoodPlateItems } from "./../../util/myPlate"
+import { itemsRequired } from '../../util/itemsRequired'
+
 
 function MyPlate() {
 
@@ -17,27 +19,16 @@ function MyPlate() {
             items: myFoodPlateItems
         })
 
-        if (!localStorage.getItem('plate')) {
-            await swal({
-                icon: 'error',
-                title: "Error",
-                text: "Food Items Required",
-                button: "Ok!"
-            })
-            window.location.href = "/menu"
-        }
-
-        if (localStorage.getItem('plate')) {
-            if (response.data.success) {
-                await swal("Order Placed", response.data.message, "success")
-                localStorage.removeItem("plate")
-                window.location.href = "/"
-            }
+        if (response.data.success) {
+            await swal("Order Placed", response.data.message, "success")
+            localStorage.removeItem("plate")
+            window.location.href = "/"
         }
 
     }
 
     useEffect(() => {
+        itemsRequired()
         loginRequired()
     }, [])
 

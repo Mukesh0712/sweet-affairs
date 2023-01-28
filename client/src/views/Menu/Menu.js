@@ -4,14 +4,13 @@ import Navbar from '../../components/Navbar/Navbar'
 import FoodItemCard from "./../../components/FoodItemCard/FoodItemCard"
 import { loginRequired } from '../../util/loginRequired'
 import { currentUser } from '../../util/currentUser'
-
 import "./Menu.css"
+
 
 function Menu() {
 
     const [searchText, setSearchText] = useState("")
     const [currentFoodItems, setCurrentFoodItems] = useState([])
-
 
     async function fetchAllItems() {
         console.log("Fetching All Items");
@@ -44,7 +43,6 @@ function Menu() {
         <div>
 
             <Navbar user={currentUser?.name} />
-
 
             <div className='search-container text-center'>
                 <input type='text' placeholder='Search' className='fs-4'
