@@ -71,7 +71,7 @@ function Navbar({ user }) {
 
                             <li class="nav-item me-4">
                                 <button type="button" class="btn position-relative">
-                                    <Link to="/myPlate fw-bold ">
+                                    <Link to="/myPlate">
                                         <i class="fa-solid fa-cart-shopping text-black link-hover border-0"></i>
                                         <span class="nav-link position-absolute mt-2 top-0 start-100 translate-middle badge rounded-pill badge-bg text-white fw-bold">{foodItemCount}</span>
                                     </Link>
