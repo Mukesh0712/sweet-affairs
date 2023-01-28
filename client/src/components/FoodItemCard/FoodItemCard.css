@@ -5,8 +5,8 @@
 }
 
 .food-item-card {
-    margin: 15px;
-    width: 90%;
+    margin: 25px;
+    width: 100%;
     height: max-content;
     border-radius: 5px;
     box-shadow: #cfcfcf86 0px 0px 5px 5px;
@@ -144,8 +144,9 @@
 
 .food-item-card-btn {
     padding: 0%;
-    width: 50%;
+    width: 55%;
     height: 30px;
+    flex-wrap: wrap;
 }
 
 .food-item-card-btn-add {
