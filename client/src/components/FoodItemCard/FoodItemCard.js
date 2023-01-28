@@ -48,7 +48,7 @@ function FoodItemCard({ category, description, imgURL, price, title }) {
 
             <div className='food-item-card col-md-4'>
 
-                <div className='food-item-card-img-container'>
+                <div className='food-item-card-img-container transition'>
                     <img alt='' src={imgURL} className='food-item-card-img' />
                 </div>
 
