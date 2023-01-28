@@ -23,6 +23,7 @@ function FoodItemCard({ category, description, imgURL, price, title }) {
 
         await swal ({
             title: "Added to Plate",
+            text: "Food Item Added Successfully",
             icon: "success",
         })
 

@@ -15,11 +15,13 @@ function Navbar({ user }) {
             localStorage.removeItem('currentUser')
             localStorage.removeItem('plate')
             await swal({
-                icon: 'success',
-                title: "Success",
-                text: "Logout Successfully",
-                button: "Ok!"
+                title: "Are you sure?",
+                text: "Want to Logging Out!",
+                icon: "warning",
+                buttons: "OK",
+                dangerMode: true,
             })
+            
             window.location.href = '/login'
 
         }
