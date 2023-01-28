@@ -44,8 +44,10 @@ function Menu() {
 
             <Navbar user={currentUser?.name} />
 
-            <div className='search-container text-center'>
-                <input type='text' placeholder='Search' className='fs-4'
+            <p className='menu-card'>Menu Card</p>
+
+            <div className='search-container'>
+                <input type='text' placeholder='Search Here ...' className='fs-4 search-input'
                     value={searchText} onChange={(e) => { setSearchText(e.target.value) }} />
             </div>
 
