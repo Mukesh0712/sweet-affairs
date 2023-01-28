@@ -62,7 +62,7 @@ function Table() {
             {availabletables &&
                 availabletables?.map((availabletable) => {
                     return (
-                        <div className='col-md-4'>
+                        <div className='col-md-3'>
                             <p className='table-name'>Table : {availabletable.tableNumber}
                                 <hr/>
                                 <img className='table-img' alt='' src='https://media.istockphoto.com/id/1286120728/vector/home-furnishings-table-with-chairs.jpg?s=612x612&w=0&k=20&c=o8yKNC-r0xuhNI-BV_MRdY4d9YsFMBRbBqyR5bromac=' />

@@ -5,12 +5,13 @@
     text-align: center;
     font-size: 30px;
     font-weight: 600;
+    margin-bottom: 20px;
 }
 
 .table-name{
     color: #407BFF;
-    border-radius: 10px;
-    box-shadow: #b4b4b4 0px 0px 10px 3px;
+    border-radius: 5px;
+    box-shadow: #cbcbcb85 0px 0px 5px 2px;
     width: 75%;
     height: max-content;
     padding: 10px;
@@ -24,7 +25,7 @@
 }
 
 .table-name:hover{
-    box-shadow: #aaaaaa 0px 0px 20px 4px;
+    box-shadow: #aaaaaa95 0px 0px 5px 2px;
 }
 
 .table-img{
@@ -41,10 +42,10 @@
     justify-content: center;
     margin-left: auto;
     margin-right: auto;
-    padding: 7px;
+    padding: 5px;
     width: 100%;
     border: none;
-    border-radius: 5px;
+    border-radius: 3px;
     font-size: 16px;
     font-weight: bold;
     color: rgba(255, 255, 255, 0.837);
