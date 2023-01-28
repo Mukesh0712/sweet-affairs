@@ -4,7 +4,7 @@ import swal from 'sweetalert'
 
 import { currentUser } from './../../util/currentUser'
 import "./Signup.css"
-import signupImg from "./../../images/Tasting-amico.png"
+import signupImg from "./../../assets/Tasting-amico.png"
 import { Link } from "react-router-dom"
 import Navbar from '../../components/Navbar/Navbar'
 

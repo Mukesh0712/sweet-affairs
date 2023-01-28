@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import swal from 'sweetalert'
-
 import "./FoodItemCard.css"
 
 function FoodItemCard({ category, description, imgURL, price, title }) {
@@ -33,9 +32,9 @@ function FoodItemCard({ category, description, imgURL, price, title }) {
 
     function decrement(){
 
-        let value = 0
+        let value = 1
         if(quantity <= value){
-            value = 1
+            value = 2
         }
         else
         {

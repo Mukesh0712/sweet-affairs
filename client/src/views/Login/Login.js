@@ -3,7 +3,7 @@ import axios from "axios"
 import swal from 'sweetalert'
 import { currentUser } from './../../util/currentUser'
 import "./Login.css"
-import loginImg from "./../../images/Valentine's Day dinner-amico.png"
+import loginImg from "./../../assets/Valentine's Day dinner-amico.png"
 import { Link } from "react-router-dom"
 import Navbar from '../../components/Navbar/Navbar'
 

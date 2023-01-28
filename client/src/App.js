@@ -7,6 +7,7 @@ import Signup from './views/Signup/Signup'
 import MyPlate from './views/MyPlate/MyPlate'
 import MyOrders from './views/MyOrders/MyOrders'
 import Profile from './views/Profile/Profile'
+import Menu from './views/Menu/Menu'
 import Table from './views/Table/Table'
 
 const App = () => {
@@ -20,6 +21,7 @@ const App = () => {
           <Route path='/myPlate' element={<MyPlate/>} />
           <Route path='/myorders' element={<MyOrders/>} />
           <Route path='/profile' element={<Profile/>} />
+          <Route path='/menu' element={<Menu/>} />
           <Route path='/tables' element={<Table/>} />
         </Routes>
       </BrowserRouter>

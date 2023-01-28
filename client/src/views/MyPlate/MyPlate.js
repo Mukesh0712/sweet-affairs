@@ -1,27 +1,45 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import axios from 'axios'
 import swal from 'sweetalert'
 import "./MyPlate.css"
 import Navbar from '../../components/Navbar/Navbar'
 import { currentUser } from '../../util/currentUser'
+import { loginRequired } from '../../util/loginRequired'
 import { myFoodPlateItems } from "./../../util/myPlate"
 
 function MyPlate() {
 
     async function placeFoodOrder() {
+
         const response = await axios.post("/orderFoodItems", {
             userID: currentUser._id,
             tableNumber: localStorage.getItem("tableNumber") || 1,
             items: myFoodPlateItems
         })
-        
-        if (response.data.success) {
-            await swal("Order Placed", response.data.message, "success")
-            localStorage.removeItem("plate")
-            window.location.href = "/"
+
+        if (!localStorage.getItem('plate')) {
+            await swal({
+                icon: 'error',
+                title: "Error",
+                text: "Food Items Required",
+                button: "Ok!"
+            })
+            window.location.href = "/menu"
+        }
+
+        if (localStorage.getItem('plate')) {
+            if (response.data.success) {
+                await swal("Order Placed", response.data.message, "success")
+                localStorage.removeItem("plate")
+                window.location.href = "/"
+            }
         }
 
     }
+
+    useEffect(() => {
+        loginRequired()
+    }, [])
 
     return (
         <div>

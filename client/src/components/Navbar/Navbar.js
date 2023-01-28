@@ -4,21 +4,24 @@ import "./Navbar.css"
 import { currentUser } from '../../util/currentUser'
 import { myFoodPlateCount } from '../../util/myPlate'
 import { Link } from "react-router-dom"
-import Table from '../../views/Table/Table'
 
 function Navbar({ user }) {
 
     const [foodItemCount, setFoodItemCount] = useState(myFoodPlateCount)
-
+    
     async function logOut() {
-        localStorage.removeItem('currentUser')
-        await swal({
-            icon: 'success',
-            title: "Success",
-            text: "Logout Successfully",
-            button: "Ok!"
-        })
-        window.location.href = '/login'
+        if(currentUser){
+            localStorage.removeItem('currentUser')
+            localStorage.removeItem('plate')
+            await swal({
+                icon: 'success',
+                title: "Success",
+                text: "Logout Successfully",
+                button: "Ok!"
+            })
+            window.location.href = '/login'
+    
+        }
     }
 
     return (
@@ -55,21 +58,7 @@ function Navbar({ user }) {
                             </li>
 
                             <li class="nav-item dropdown">
-
-                                <Link class="nav-link active dropdown-toggle" to='/' role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    Menu
-                                </Link>
-
-                                <ul class="dropdown-menu">
-                                    <li><Link class="dropdown-item" to="/">Chicken</Link></li>
-                                    <li><Link class="dropdown-item" to="/">Fish</Link></li>
-                                    <li><Link class="dropdown-item" to="/">Egg</Link></li>
-                                    <li><Link class="dropdown-item" to="/">Burger</Link></li>
-                                    <li><Link class="dropdown-item" to="/">Pizza</Link></li>
-                                    <li><hr class="dropdown-divider" /></li>
-                                    <li><Link class="dropdown-item" to="/">View More</Link></li>
-                                </ul>
-
+                                <Link class="nav-link active" to='/menu' role="button" >Menu</Link>
                             </li>
 
                         </ul>

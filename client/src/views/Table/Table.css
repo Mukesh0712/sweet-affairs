@@ -8,9 +8,9 @@
 }
 
 .table-name{
-    border: 3px gray solid;
+    color: #407BFF;
     border-radius: 10px;
-    box-shadow: 0 0 5px 2px gainsboro;
+    box-shadow: #b4b4b4 0px 0px 10px 3px;
     width: 75%;
     height: max-content;
     padding: 10px;
@@ -21,6 +21,10 @@
     margin-right: auto;
     font-size: 16px;
     font-weight: bold;
+}
+
+.table-name:hover{
+    box-shadow: #aaaaaa 0px 0px 20px 4px;
 }
 
 .table-img{
