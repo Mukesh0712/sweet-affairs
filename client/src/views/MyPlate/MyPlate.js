@@ -41,22 +41,18 @@ function MyPlate() {
                     myFoodPlateItems.map((item, index) => {
 
                         return (
-                            <div className='container col-md-4'>
+                            <div className='plate-container'>
 
-                                <div className='plate-container'>
+                                <div className='plate'>
+                                    <h6 className='name'>Name : {item.name}</h6>
+                                </div>
 
-                                    <div className='plate'>
-                                        <h6 className='name'>Name : {item.name}</h6>
-                                    </div>
+                                <div className='plate'>
+                                    <h6 className='price'>Price : {item.price}</h6>
+                                </div>
 
-                                    <div className='plate'>
-                                        <h6 className='price'>Price : {item.price}</h6>
-                                    </div>
-
-                                    <div className='plate'>
-                                        <h6 className='quantity'>Quantity : {item.quantity}</h6>
-                                    </div>
-
+                                <div className='plate'>
+                                    <h6 className='quantity'>Quantity : {item.quantity}</h6>
                                 </div>
 
                             </div>

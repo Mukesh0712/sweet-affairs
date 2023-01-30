@@ -3,16 +3,21 @@
     justify-content: space-evenly;
 }
 
-.container{
-    width: 25%;
-    margin: 20px;
-    border-radius: 10px;
+.plate-container{
+    width: 50%;
+    height: max-content;
+    margin: 15px;
+    border-radius: 5px;
     padding: 10px;
-    box-shadow: 0 0px 10px 0 rgba(65, 132, 234, 0.75);
+    box-shadow: #cfcfcf86 0px 0px 5px 5px;
 }
 
-.container:hover{
-    box-shadow: 0 0px 12px 0 rgb(27, 103, 218);
+.plate-container:hover,
+.plate-container:focus
+{
+    box-shadow: #aaaaaa89 0px 0px 5px 3px;
+    -webkit-transform: scale(0.95);
+    transform: scale(1.04);
 }
 
 .confirm-btn{
@@ -26,6 +31,7 @@
 .button{
     color: #454545 ;
 }
+
 .button:hover{
     color: black;
 }

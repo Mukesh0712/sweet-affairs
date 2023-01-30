@@ -45,7 +45,7 @@ function FoodItemCard({ category, description, imgURL, price, title }) {
     }
 
     return (
-        <div className='col-md-3 food-item-container'>
+        <div className='col-lg-3 col-md-4 col-sm-6 col-12 food-item-container'>
 
             <div className='food-item-card'>
 
@@ -75,8 +75,8 @@ function FoodItemCard({ category, description, imgURL, price, title }) {
                         </div>
                     </div>
 
-                    <div className='food-item-card-price-btn'>
-                        <div className='food-item-card-price'>
+                    <div className='food-item-card-price-btn col-sm-12'>
+                        <div className='food-item-card-price '>
                             <p>Price : {price}₹ </p>
                         </div>
 
