@@ -11,6 +11,10 @@ import { itemsRequired } from '../../util/itemsRequired'
 
 function MyPlate() {
 
+    async function deletePlate() {
+        
+    }
+
     async function placeFoodOrder() {
 
         const response = await axios.post("/orderFoodItems", {
@@ -55,6 +59,9 @@ function MyPlate() {
                                     <h6 className='quantity'>Quantity : {item.quantity}</h6>
                                 </div>
 
+                                <div className='dlt-plate'>
+                                    <i class="fa-solid fa-trash" onClick={deletePlate}></i>
+                                </div>
                             </div>
                         )
 

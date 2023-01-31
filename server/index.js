@@ -212,7 +212,7 @@ app.get('/allFoodItems', async (req, res) => {
 app.post('/createTable', async (req, res) => {
     const { tableNumber } = req.body;
 
-    if (!tableNumber) {
+    if (!tableNumber && tableNumber == '') {
         res.json({
             success: false,
             message: `Please Enter Table Number!`,
@@ -304,20 +304,12 @@ app.post('/unBookTable', async (req, res) => {
 //Get Available Table API
 app.get('/availableTables', async (req, res) => {
     const availableTables = await Table.find({ booked: false });
-
-    if (!availableTables) {
-        res.json({
-            success: false,
-            message: `Not Available!`
-        })
-    }
-    else {
-        res.json({
-            success: true,
-            message: `Available Tables fetched Successfully`,
-            data: availableTables
-        })
-    }
+    
+    res.json({
+        success: true,
+        message: `Available Tables fetched Successfully`,
+        data: availableTables
+    })
 })
 
 //Order FoodItems API
@@ -326,15 +318,15 @@ app.post('/orderFoodItems', async (req, res) => {
 
     const emptyFields = []
 
-    if(!userID) emptyFields.push('UserID')
-    if(!tableNumber) emptyFields.push('TableNumber')
-    if(!items) emptyFields.push('Items')
+    if (!userID) emptyFields.push('UserID')
+    if (!tableNumber) emptyFields.push('TableNumber')
+    if (!items) emptyFields.push('Items')
 
-    if(emptyFields.length > 0){
+    if (emptyFields.length > 0) {
         res.json({
             success: false,
             message: `${emptyFields.join(' , ')} is Required`,
-        })    
+        })
     }
 
     const totalOrders = await Order.countDocuments();
@@ -361,11 +353,11 @@ app.post('/orderFoodItems', async (req, res) => {
 app.get('/order', async (req, res) => {
     const { orderID } = req.query;
 
-    if(!orderID){
+    if (!orderID) {
         res.json({
             success: false,
             message: `OrderID is Required`,
-        })    
+        })
     }
 
     const order = await Order.findOne({ orderID: orderID });
@@ -381,11 +373,11 @@ app.get('/order', async (req, res) => {
 app.get('/ordersByUserID', async (req, res) => {
     const { userID } = req.query;
 
-    if(!userID){
+    if (!userID) {
         res.json({
             success: false,
             message: `UserID is Required`,
-        })    
+        })
     }
 
     const orders = await Order.find({ userID: userID });
