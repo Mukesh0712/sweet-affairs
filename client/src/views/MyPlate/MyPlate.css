@@ -1,15 +1,20 @@
 .my-plate-container{
+    margin-left: auto;
+    margin-right: auto;
     display: flex;
-    justify-content: space-evenly;
+    flex-direction: column;
 }
 
 .plate-container{
-    width: 50%;
-    height: max-content;
+    width: 500px;
+    height: 170px;
     margin: 15px;
+    margin-left: auto;
+    margin-right: auto;
     border-radius: 5px;
-    padding: 10px;
     box-shadow: #cfcfcf86 0px 0px 5px 5px;
+    display: flex;
+    justify-content: space-between;
 }
 
 .plate-container:hover,
@@ -18,6 +23,65 @@
     box-shadow: #aaaaaa89 0px 0px 5px 3px;
     -webkit-transform: scale(0.95);
     transform: scale(1.04);
+}
+
+.plate-img-container{
+    width: 210px;
+    height: fit-content;
+    text-align: center;
+    margin-top: auto;
+    margin-bottom: auto;
+    padding: 0;
+}
+
+.plate-img{
+    width: 200px;
+    height: 150px;
+    aspect-ratio: 3/2;
+    margin: 0;
+    padding: 0;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+
+}
+
+.plate-text-container{
+    width: 280px;
+    height: 150px;
+    margin-top: auto;
+    margin-bottom: auto;
+    padding: 0;
+    margin-left: 5px;
+}
+
+.plate{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 3px;
+}
+
+.plate-text{
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.dlt-plate{
+    width: fit-content;
+    height: fit-content;
+    padding: 2px;
+    margin: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    color: rgb(179, 32, 32);
+}
+
+.dlt-plate:hover{
+    color: #454545;
+    height: max-content;
+    border-radius: 5px;
 }
 
 .confirm-btn{
@@ -36,15 +100,3 @@
     color: black;
 }
 
-.dlt-plate{
-    width: max-content;
-    padding: 5px;
-    font-size: 16px;
-    cursor: pointer;
-    color: rgb(179, 32, 32);
-}
-
-.dlt-plate:hover{
-    color: #454545;
-
-}

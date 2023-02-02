@@ -63,11 +63,11 @@ function Signup() {
 
             <div className='row signup-row'>
 
-                <div className='col-md-6 signup-col-1'>
+                <div className='col-md-6 col-sm-6 signup-col-1'>
                     <img alt='signup-img' src={signupImg} className='signup-img' />
                 </div>
 
-                <div className='col-md-6 signup-col-2'>
+                <div className='col-md-6 col-sm-6 signup-col-2'>
                     <div className='form-container'>
                         <form>
                             <div className='form-group signup-form'>

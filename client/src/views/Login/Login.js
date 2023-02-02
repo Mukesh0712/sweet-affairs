@@ -55,11 +55,11 @@ function Login() {
 
             <div className='row login-row'>
 
-                <div className='col-md-6 login-col'>
+                <div className='login-col col-12 col-sm-6'>
                     <img alt='login-img' src={loginImg} className='login-img' />
                 </div>
 
-                <div className='col-md-6 login-col'>
+                <div className='login-col col-12 col-sm-6'>
                     <div className='form-container'>
                         <form>
                             <div className='form-group login-form'>

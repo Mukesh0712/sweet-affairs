@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import swal from 'sweetalert'
 import "./FoodItemCard.css"
 
-function FoodItemCard({ category, description, imgURL, price, title }) {
+function FoodItemCard({category, description, imgURL, price, title }) {
 
     const [quantity, setQuantity] = useState(1)
 
@@ -10,10 +10,9 @@ function FoodItemCard({ category, description, imgURL, price, title }) {
         const plateObject = {
             name: title,
             price: price,
-            quantity: quantity
+            quantity: quantity,
+            imgURL: imgURL,
         }
-
-        //add to plate in localStorage
 
         const existingPlate = JSON.parse(localStorage.getItem('plate')) || []
 

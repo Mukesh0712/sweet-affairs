@@ -20,37 +20,41 @@ function Table() {
         loginRequired()
     }, [])
 
+
     async function bookTable(tableNumber) {
-        console.log('Table Booked');
         const response = await axios.post('/bookTable', {
             tableNumber: tableNumber,
             userID: currentUser._id
         })
 
-        console.log(response.data.data);
-
-        if (response.data.data.booked) {
-            await swal("Table Booked Successfully", response.data.message, "success")
-            localStorage.setItem("bookedTable", JSON.stringify(response.data.data))
+        if (response.data.success) {
+            await swal({
+                icon: 'success',
+                title: "Booked Table",
+                text: response.data.message,
+            })
+            localStorage.setItem('bookedTable', JSON.stringify(response.data.data))
+            window.location.reload()
         }
-        else{
-            await swal("Error", response.data.message, "error")
+        else {
+            await swal({
+                icon: 'error',
+                title: "Choose Another Table !",
+                text: response.data.message,
+            })
+            window.location.reload()
         }
     }
 
-    async function unbookTable(tableNumber){
-        console.log("Unbooked Table");
-        const response =  await axios.post('/unBookTable', {tableNumber: tableNumber})
-
-        console.log(response.data.data);
-        localStorage.removeItem("bookedTable")
-
+    async function unbookTable(tableNumber) {
+        const response = await axios.post('/unBookTable', { tableNumber: tableNumber })
         await swal({
             icon: 'success',
-            title: "success",
+            title: "Unbooked Table",
             text: response.data.message,
         })
-
+        localStorage.removeItem('bookedTable')
+        window.location.reload()
     }
 
     return (

@@ -110,7 +110,7 @@ app.post('/login', async (req, res) => {
 
 //FoodItem API
 app.post('/foodItem', async (req, res) => {
-    const { title, description, imgURL, price, category } = req.body;
+    const {title, description, imgURL, price, category } = req.body;
 
     //validation to check all fields are filled
     const emptyFields = []
@@ -212,7 +212,7 @@ app.get('/allFoodItems', async (req, res) => {
 app.post('/createTable', async (req, res) => {
     const { tableNumber } = req.body;
 
-    if (!tableNumber && tableNumber == '') {
+    if (!tableNumber) {
         res.json({
             success: false,
             message: `Please Enter Table Number!`,
@@ -244,7 +244,7 @@ app.post('/createTable', async (req, res) => {
 
 //Book Table API
 app.post('/bookTable', async (req, res) => {
-    const { tableNumber, userID } = req.body;
+    const {tableNumber, userID } = req.body;
 
     if (!tableNumber || !userID) {
         return res.json({
@@ -296,14 +296,14 @@ app.post('/unBookTable', async (req, res) => {
 
     res.json({
         success: true,
-        message: `UnBook Table ${tableNumber} Successfully`,
+        message: `UnBook Table ${tableNumber}`,
         data: existingTable
     })
 })
 
 //Get Available Table API
 app.get('/availableTables', async (req, res) => {
-    const availableTables = await Table.find({ booked: false });
+    const availableTables = await Table.find();
     
     res.json({
         success: true,
@@ -314,10 +314,10 @@ app.get('/availableTables', async (req, res) => {
 
 //Order FoodItems API
 app.post('/orderFoodItems', async (req, res) => {
-    const { userID, tableNumber, items } = req.body;
+    const {userID, tableNumber, items } = req.body;
 
     const emptyFields = []
-
+    
     if (!userID) emptyFields.push('UserID')
     if (!tableNumber) emptyFields.push('TableNumber')
     if (!items) emptyFields.push('Items')

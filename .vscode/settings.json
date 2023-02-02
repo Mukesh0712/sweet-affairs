@@ -3,6 +3,9 @@
         "availabletable",
         "availabletables",
         "flexnav",
-        "Sublink"
+        "Sublink",
+        "swal",
+        "sweetalert",
+        "unbook"
     ]
 }

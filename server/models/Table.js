@@ -5,7 +5,7 @@ const tableSchema = new Schema({
     booked: Boolean,
     bookedBy: {
         type: Schema.Types.ObjectId,
-        ref: "User"
+        ref: "User",
     }
 })
 
