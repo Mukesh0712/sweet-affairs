@@ -71,8 +71,10 @@ function Table() {
                             <p className='table-name'>Table : {availabletable.tableNumber}
                                 <hr />
                                 <img className='table-img' alt='' src='https://media.istockphoto.com/id/1286120728/vector/home-furnishings-table-with-chairs.jpg?s=612x612&w=0&k=20&c=o8yKNC-r0xuhNI-BV_MRdY4d9YsFMBRbBqyR5bromac=' />
-                                <button type='button' className='book-btn' onClick={() => { bookTable(availabletable.tableNumber) }}>BOOK TABLE</button>
-                                <button type='button' className='book-btn' onClick={() => { unbookTable(availabletable.tableNumber) }}>UN-BOOK TABLE</button>
+                                <div className='book-btn-container'>
+                                    <button type='button' className='book-btn' onClick={() => { bookTable(availabletable.tableNumber) }}>BOOK</button>
+                                    <button type='button' className='book-btn' onClick={() => { unbookTable(availabletable.tableNumber) }}>UNBOOK</button>
+                                </div>
                             </p>
                             <br />
                         </div>

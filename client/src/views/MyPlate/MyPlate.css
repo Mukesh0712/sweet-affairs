@@ -23,6 +23,7 @@
     box-shadow: #aaaaaa89 0px 0px 5px 3px;
     -webkit-transform: scale(0.95);
     transform: scale(1.04);
+    transition: 0.5s;
 }
 
 .plate-img-container{

@@ -26,6 +26,8 @@
     box-shadow: #aaaaaa89 0px 0px 5px 3px;
     -webkit-transform: scale(0.95);
     transform: scale(1.04);
+    transition: 0.5s;
+
 }
 
 .table-img{
@@ -36,18 +38,19 @@
     margin-right: auto;
 
 }
+.book-btn-container{
+    display: flex;
+    justify-content: space-between;
+}
 
 .book-btn{
     display: flex;
     justify-content: center;
-    margin: 5px;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 5px;
-    width: 100%;
+    padding: 4px;
+    width: 47%;
     border: none;
     border-radius: 3px;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: bold;
     color: rgba(255, 255, 255, 0.837);
     background: #407BFF;
