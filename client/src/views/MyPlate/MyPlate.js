@@ -1,4 +1,4 @@
-import React, {useState, useEffect } from 'react'
+import React, { useEffect } from 'react'
 import axios from 'axios'
 import swal from 'sweetalert'
 import "./MyPlate.css"
@@ -8,7 +8,6 @@ import { loginRequired } from '../../util/loginRequired'
 import { myFoodPlateItems } from "./../../util/myPlate"
 import { itemsRequired } from '../../util/itemsRequired'
 import { tableRequired } from '../../util/tableRequired'
-
 
 function MyPlate() {
 
@@ -30,7 +29,6 @@ function MyPlate() {
         window.location.reload()
     }
 
-
     async function placeFoodOrder() {
 
         const response = await axios.post("/orderFoodItems", {
@@ -47,10 +45,20 @@ function MyPlate() {
 
     }
 
+    async function clearPlate() {
+        localStorage.removeItem("plate")
+        await swal({
+            icon: 'success',
+            title: "Plate Cleared !",
+        })
+        window.location.href = "/menu";
+    }
+
     return (
         <div>
             <Navbar />
             <h2 className='text-center'>My Plate 🍽️</h2>
+
             <div className='my-plate-container row'>
                 {
                     myFoodPlateItems.map((item, index) => {
@@ -84,12 +92,13 @@ function MyPlate() {
 
                     })
                 }
-            </div>
 
-            <div className='confirm-btn'>
-                <button className='btn btn-warning fs-5 fw-bold button' onClick={placeFoodOrder}>Place Order</button>
-            </div>
+                <div className='confirm-btn'>
+                    <button className='btn fs-5 fw-bold button' onClick={placeFoodOrder}>PLACE ORDER</button>
+                    <button className='btn fs-5 fw-bold button-clr' onClick={clearPlate}>CLEAR PLATE</button>
+                </div>
 
+            </div>
         </div>
     )
 }

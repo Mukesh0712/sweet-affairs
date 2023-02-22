@@ -7,7 +7,7 @@ export async function itemsRequired() {
             title: 'Items Required',
             text: 'Please Add items to Continue',
             icon: 'warning',
-            buttons: true,
+            button: "Ok",
             dangerMode: true
         })
         window.location.href = '/menu'

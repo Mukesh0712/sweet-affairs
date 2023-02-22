@@ -86,18 +86,52 @@
 }
 
 .confirm-btn{
-    width: 50%;
+    width: 500px;
+    margin: auto; 
     text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 5px;
+    display: flex;
+    justify-content: space-between;
 }
 
 .button{
-    color: #454545 ;
+    margin: 10px;
+    background-size: 300% 100%;
+    moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+    background-image: linear-gradient(to right, #25aae1, #4481eb, #04befe, #3f86ed);
+    outline: none;
+    color: #fff;
 }
 
 .button:hover{
-    color: black;
+    background-position: 100% 0;
+    moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+    color: #fff;
+}
+
+.button-clr{
+    margin: 10px;
+    background-size: 300% 100%;
+    moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+    background-image: linear-gradient(to right, #d93f0b, #bf2828, #d46d48, #ce5247);
+    outline: none;
+    color: #fff;
+}
+
+.button-clr:hover{
+    background-position: 100% 0;
+    moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+    color: #fff;
 }
 
