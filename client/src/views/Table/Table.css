@@ -9,7 +9,7 @@
     color: #407BFF;
     border-radius: 5px;
     box-shadow: #cbcbcb85 0px 0px 5px 2px;
-    width: 75%;
+    width: 83%;
     height: max-content;
     padding: 10px;
     text-align: center;
@@ -48,10 +48,10 @@
     display: flex;
     justify-content: center;
     padding: 4px;
-    width: 47%;
+    width: 48%;
     border: none;
     border-radius: 3px;
-    font-size: 14px;
+    font-size: 12px;
     font-weight: bold;
     color: rgba(255, 255, 255, 0.837);
     background: #407BFF;

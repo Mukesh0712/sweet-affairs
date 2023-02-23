@@ -3,6 +3,7 @@ import axios from 'axios'
 import swal from 'sweetalert'
 import "./MyPlate.css"
 import Navbar from '../../components/Navbar/Navbar'
+import Footer from '../../components/Footer/Footer'
 import { currentUser } from '../../util/currentUser'
 import { loginRequired } from '../../util/loginRequired'
 import { myFoodPlateItems } from "./../../util/myPlate"
@@ -94,11 +95,13 @@ function MyPlate() {
                 }
 
                 <div className='confirm-btn'>
-                    <button className='btn fs-5 fw-bold button' onClick={placeFoodOrder}>PLACE ORDER</button>
-                    <button className='btn fs-5 fw-bold button-clr' onClick={clearPlate}>CLEAR PLATE</button>
+                    <button className='btn button' onClick={placeFoodOrder}>PLACE ORDER</button>
+                    <button className='btn button-clr' onClick={clearPlate}>CLEAR PLATE</button>
                 </div>
 
             </div>
+
+            <Footer/>
         </div>
     )
 }

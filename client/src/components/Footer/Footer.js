@@ -6,7 +6,7 @@ function Footer() {
         <div className='footer'>
 
             <div className='row footer-middle-part'>
-
+                <button className='footer-btn'>GET STARTED</button>
             </div>
 
             <div className='row footer-row'>
@@ -35,8 +35,8 @@ function Footer() {
 
                 <div className='col-3 footer-col'>
                     <p>Subscribe to get important Updates</p>
-                    <input placeholder='Your E-MAIL' className='text-center rounded border-0 subs-input'/>
-                    <input value='SUBSCRIBE' className='text-center rounded border-0 subs-input-2 w-50 text-white'/>
+                    <input placeholder='Your E-MAIL' className='text-center subs-input'/>
+                    <input value='SUBSCRIBE' className='text-center subs-input-2 text-white'/>
                 </div>
 
             </div>

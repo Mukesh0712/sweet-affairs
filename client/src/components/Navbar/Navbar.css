@@ -3,6 +3,9 @@
 }
 
 .logout-btn {
+    font-size: 12px;
+    border-radius: 3px;
+    width: 90px;
     background-size: 300% 100%;
     moz-transition: all .4s ease-in-out;
     -o-transition: all .4s ease-in-out;

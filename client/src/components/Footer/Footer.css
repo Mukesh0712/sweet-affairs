@@ -4,6 +4,7 @@
     background: #001334;
     font-weight: 700;
     color: rgba(255, 255, 255, 0.552);
+    margin-top: 50px;
 }
 
 .footer-middle-part{
@@ -12,17 +13,15 @@
     left: 100px;
     width: 900px;
     height: 100px;
-    border-radius: 8px;
+    border-radius: 5px;
     border: none;
     font-weight: bold;
-    color: rgba(255, 255, 255, 0.837);
-    background: #407BFF;
+    background: #eaeaea;
     background-size: 300% 100%;
     moz-transition: all .4s ease-in-out;
     -o-transition: all .4s ease-in-out;
     -webkit-transition: all .4s ease-in-out;
     transition: all .4s ease-in-out;
-    background-image: linear-gradient(to right, #25aae1, #4481eb, #04befe, #3f86ed);
     outline: none;
 }
 
@@ -32,6 +31,37 @@
     -o-transition: all .4s ease-in-out;
     -webkit-transition: all .4s ease-in-out;
     transition: all .4s ease-in-out;
+}
+
+.footer-btn{
+    width: 110px;
+    height: 30px;
+    border-radius: 3px;
+    position: absolute;
+    left: 700px;
+    top: 35px;
+    border: none;
+    text-align: center;
+    font-size: 12px;
+    font-weight: bold;
+    color: rgba(255, 255, 255, 0.837);
+    background-size: 300% 100%;
+    moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+    background-image: linear-gradient(to right, #25aae1, #4481eb, #04befe, #3f86ed);
+    outline: none;
+
+}
+
+.footer-btn:hover{
+    background-position: 100% 0;
+    moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+
 }
 
 .footer-row{
@@ -57,11 +87,16 @@
 }
 
 .subs-input{
-    height: 25px;
+    height: 26px;
+    width: 150px;
     margin-bottom: 10px;
+    border-radius: 3px;
+    border: none;
+
 }
 
 .subs-input-2{
+    width: 100px;
     height: 25px;
     border: none;
     border-radius: 3px;
@@ -69,7 +104,6 @@
     font-size: 12px;
     font-weight: bold;
     color: rgba(255, 255, 255, 0.837);
-    background: #407BFF;
     background-size: 300% 100%;
     moz-transition: all .4s ease-in-out;
     -o-transition: all .4s ease-in-out;

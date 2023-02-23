@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import axios from "axios"
 import Navbar from '../../components/Navbar/Navbar'
 import FoodItemCard from "./../../components/FoodItemCard/FoodItemCard"
+import Footer from '../../components/Footer/Footer'
 import { loginRequired } from '../../util/loginRequired'
 import { currentUser } from '../../util/currentUser'
 import "./Menu.css"
@@ -61,6 +62,8 @@ function Menu() {
                     }
                 </div>
             </div>
+
+            <Footer/>
 
         </div>
     )

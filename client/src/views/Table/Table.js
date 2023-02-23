@@ -4,6 +4,7 @@ import swal from 'sweetalert'
 import { loginRequired } from '../../util/loginRequired'
 import { currentUser } from './../../util/currentUser'
 import Navbar from '../../components/Navbar/Navbar'
+import Footer from '../../components/Footer/Footer'
 import "./Table.css"
 
 function Table() {
@@ -19,7 +20,6 @@ function Table() {
         fetchTables()
         loginRequired()
     }, [])
-
 
     async function bookTable(tableNumber) {
         const response = await axios.post('/bookTable', {
@@ -81,6 +81,8 @@ function Table() {
                     )
                 })
             }
+
+            <Footer/>
         </div>
     )
 }
