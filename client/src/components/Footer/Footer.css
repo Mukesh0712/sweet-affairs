@@ -1,0 +1,112 @@
+.footer{
+    height: max-content;
+    position: relative;
+    background: #001334;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.552);
+}
+
+.footer-middle-part{
+    position: absolute;
+    top: -50px;
+    left: 100px;
+    width: 900px;
+    height: 100px;
+    border-radius: 8px;
+    border: none;
+    font-weight: bold;
+    color: rgba(255, 255, 255, 0.837);
+    background: #407BFF;
+    background-size: 300% 100%;
+    moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+    background-image: linear-gradient(to right, #25aae1, #4481eb, #04befe, #3f86ed);
+    outline: none;
+}
+
+.footer-middle-part:hover{
+    background-position: 100% 0;
+    moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+
+.footer-row{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 150px 0 50px 0;
+}
+
+.footer-col{
+    width:200px;
+    height: 150px;
+    margin: 10px;
+}
+
+.footer-col p:hover, h6:hover{
+    color: #fff;
+    cursor: pointer;
+}
+
+.logo{
+    width: 40px;
+}
+
+.subs-input{
+    height: 25px;
+    margin-bottom: 10px;
+}
+
+.subs-input-2{
+    height: 25px;
+    border: none;
+    border-radius: 3px;
+    text-align: center;
+    font-size: 12px;
+    font-weight: bold;
+    color: rgba(255, 255, 255, 0.837);
+    background: #407BFF;
+    background-size: 300% 100%;
+    moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+    background-image: linear-gradient(to right, #25aae1, #4481eb, #04befe, #3f86ed);
+    outline: none;
+}
+
+.subs-input-2:hover{
+    background-position: 100% 0;
+    moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+
+.socials{
+}
+
+.copyright-section{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    position: absolute;
+    bottom: 10px;
+    border-top: 2px grey solid;
+    padding-top: 10px;
+}
+
+.copyright-section p{
+    width: fit-content;
+    margin: 0 50px 0 50px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.copyright-section p:hover{
+    color: #fff;
+}
