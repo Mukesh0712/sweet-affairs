@@ -1,29 +1,31 @@
 import React from 'react'
 import "./Footer.css"
+import {Link} from "react-router-dom"
 
 function Footer() {
     return (
-        <div className='footer'>
+        <div className='footer row'>
 
-            <div className='row footer-middle-part'>
+            <div className='footer-middle-part'>
+                <p className='footer-middle-part-text'>Ready to get started? Talk to us today</p>
                 <button className='footer-btn'>GET STARTED</button>
             </div>
 
             <div className='row footer-row'>
 
                 <div className='col-3 footer-col'>
-                    <p>Sweet Affairs</p>
+                    <Link className='text-decoration-none rest-name'>Sweet Affairs</Link>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                 </div>
 
                 <div className='col-3 footer-col'>
                     <p>Follow Us</p>
                     <span className='socials'>
-                        <h6>GitHub</h6>
-                        <h6>LinkedIn</h6>
-                        <h6>Facebook</h6>
-                        <h6>Twitter</h6>
-                        <h6>Instagram</h6>
+                        <a href="https://github.com/Mukesh0712" target="_blank" rel='noreferrer' className='text-decoration-none socials-link'><h6>GitHub</h6></a>
+                        <a href="https://www.linkedin.com/in/mukesh-pimpalkar-426228213/" target="_blank" rel='noreferrer' className='text-decoration-none socials-link'><h6>LinkedIn</h6></a>
+                        <a href="https://www.facebook.com/pixel.peeper.5/" target="_blank" rel='noreferrer' className='text-decoration-none socials-link'><h6>Facebook</h6></a>
+                        <a href="https://twitter.com/Mukesh_0712" target="_blank" rel='noreferrer' className='text-decoration-none socials-link'><h6>Twitter</h6></a>
+                        <a href="https://www.instagram.com/p.mukesh_07/" target="_blank" rel='noreferrer' className='text-decoration-none socials-link'><h6>Instagram</h6></a>
                     </span>
                 </div>
 
