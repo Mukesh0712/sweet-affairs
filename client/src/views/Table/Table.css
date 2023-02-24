@@ -54,7 +54,6 @@
     font-size: 12px;
     font-weight: bold;
     color: rgba(255, 255, 255, 0.837);
-    background: #407BFF;
     background-size: 300% 100%;
     moz-transition: all .4s ease-in-out;
     -o-transition: all .4s ease-in-out;
@@ -70,4 +69,32 @@
     -o-transition: all .4s ease-in-out;
     -webkit-transition: all .4s ease-in-out;
     transition: all .4s ease-in-out;
+}
+
+.unbook-btn{
+    display: flex;
+    justify-content: center;
+    padding: 4px;
+    width: 48%;
+    border: none;
+    border-radius: 3px;
+    font-size: 12px;
+    font-weight: bold;
+    color: rgba(255, 255, 255, 0.837);
+    background-size: 300% 100%;
+    moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+    background-image: linear-gradient(to right, #d93f0b, #bf2828, #d46d48, #ce5247);
+    outline: none;
+}
+
+.unbook-btn:hover{
+    background-position: 100% 0;
+    moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+    color: #ffffff;
 }

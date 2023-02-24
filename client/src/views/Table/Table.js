@@ -62,7 +62,7 @@ function Table() {
 
             <Navbar />
 
-            <p className='avl-table'>Available Tables</p>
+            <p className='avl-table'>Book Table</p>
 
             {availabletables &&
                 availabletables?.map((availabletable) => {
@@ -73,7 +73,7 @@ function Table() {
                                 <img className='table-img' alt='' src='https://media.istockphoto.com/id/1286120728/vector/home-furnishings-table-with-chairs.jpg?s=612x612&w=0&k=20&c=o8yKNC-r0xuhNI-BV_MRdY4d9YsFMBRbBqyR5bromac=' />
                                 <div className='book-btn-container'>
                                     <button type='button' className='book-btn' onClick={() => { bookTable(availabletable.tableNumber) }}>BOOK</button>
-                                    <button type='button' className='book-btn' onClick={() => { unbookTable(availabletable.tableNumber) }}>UNBOOK</button>
+                                    <button type='button' className='unbook-btn' onClick={() => { unbookTable(availabletable.tableNumber) }}>UNBOOK</button>
                                 </div>
                             </p>
                             <br />
