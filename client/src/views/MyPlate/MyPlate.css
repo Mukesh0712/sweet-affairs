@@ -67,6 +67,11 @@
     font-weight: bold;
     margin-top: auto;
     margin-bottom: auto;
+    color: #262626;
+}
+
+.plate-text:hover{
+    color: #000000;
 }
 
 .dlt-plate{

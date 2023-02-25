@@ -3,6 +3,8 @@ import {BrowserRouter, Routes, Route} from "react-router-dom"
 
 import Home from './views/Home/Home'
 import Login from './views/Login/Login'
+import About from './views/About/About'
+import Contact from './views/Contact/Contact'
 import Signup from './views/Signup/Signup'
 import MyPlate from './views/MyPlate/MyPlate'
 import MyOrders from './views/MyOrders/MyOrders'
@@ -18,6 +20,8 @@ const App = () => {
           <Route path='/' element={<Home/>} />
           <Route path='/login' element={<Login/>} />
           <Route path='/signup' element={<Signup/>} />
+          <Route path='/about' element={<About/>} />
+          <Route path='/contact' element={<Contact/>} />
           <Route path='/myPlate' element={<MyPlate/>} />
           <Route path='/myorders' element={<MyOrders/>} />
           <Route path='/profile' element={<Profile/>} />

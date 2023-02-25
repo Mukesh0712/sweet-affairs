@@ -46,7 +46,7 @@ return (
                         </li>
 
                         <li class="nav-item me-4">
-                            <Link class="nav-link link-hover fw-bold" to="/">ABOUT</Link>
+                            <Link class="nav-link link-hover fw-bold" to="/about">ABOUT</Link>
                         </li>
 
                         <li class="nav-item me-4">
@@ -54,11 +54,11 @@ return (
                         </li>
 
                         <li class="nav-item me-4">
-                            <Link class="nav-link link-hover fw-bold" to="/tables">TABLES</Link>
+                            <Link class="nav-link link-hover fw-bold" to="/contact">CONTACT</Link>
                         </li>
 
                         <li class="nav-item me-4">
-                            <Link class="nav-link link-hover fw-bold" to="/">CONTACT</Link>
+                            <Link class="nav-link link-hover fw-bold" to="/tables">BOOK YOUR TABLE</Link>
                         </li>
 
                         <li class="nav-item me-4">

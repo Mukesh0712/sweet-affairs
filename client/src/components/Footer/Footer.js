@@ -14,18 +14,18 @@ function Footer() {
             <div className='row footer-row'>
 
                 <div className='col-3 footer-col'>
-                    <Link className='text-decoration-none rest-name'>Sweet Affairs</Link>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <Link className='text-decoration-none rest-name' to='/'>Sweet Affairs</Link>
+                    <p className='mt-3'>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                 </div>
 
                 <div className='col-3 footer-col'>
                     <p>Follow Us</p>
                     <span className='socials'>
-                        <a href="https://github.com/Mukesh0712" target="_blank" rel='noreferrer' className='text-decoration-none socials-link'><h6>GitHub</h6></a>
-                        <a href="https://www.linkedin.com/in/mukesh-pimpalkar-426228213/" target="_blank" rel='noreferrer' className='text-decoration-none socials-link'><h6>LinkedIn</h6></a>
-                        <a href="https://www.facebook.com/pixel.peeper.5/" target="_blank" rel='noreferrer' className='text-decoration-none socials-link'><h6>Facebook</h6></a>
-                        <a href="https://twitter.com/Mukesh_0712" target="_blank" rel='noreferrer' className='text-decoration-none socials-link'><h6>Twitter</h6></a>
-                        <a href="https://www.instagram.com/p.mukesh_07/" target="_blank" rel='noreferrer' className='text-decoration-none socials-link'><h6>Instagram</h6></a>
+                        <a href="https://github.com/Mukesh0712" target="_blank" rel='noreferrer' className='socials-link'>GitHub</a>
+                        <a href="https://www.linkedin.com/in/mukesh-pimpalkar-426228213/" target="_blank" rel='noreferrer' className='socials-link'>LinkedIn</a>
+                        <a href="https://www.facebook.com/pixel.peeper.5/" target="_blank" rel='noreferrer' className='socials-link'>Facebook</a>
+                        <a href="https://twitter.com/Mukesh_0712" target="_blank" rel='noreferrer' className='socials-link'>Twitter</a>
+                        <a href="https://www.instagram.com/p.mukesh_07/" target="_blank" rel='noreferrer' className='socials-link'>Instagram</a>
                     </span>
                 </div>
 
