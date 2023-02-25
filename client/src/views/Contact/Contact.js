@@ -40,7 +40,33 @@ function Contact() {
                             className='map' height="299px" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">\
                         </iframe>
                     </div>
+
+                    <div className='row contact-bottom'>
+
+                        <div className='col-3 contact-bottom-icon-desc'>
+                            <i class="fa-solid fa-location-dot contact-bottom-icon"></i>
+                            <p className='contact-bottom-desc'><b>Address: </b>Rengapar Road, Butibori, Nagpur 441108</p>
+                        </div>
+
+                        <div className='col-3 contact-bottom-icon-desc'>
+                            <i class="fa-solid fa-phone contact-bottom-icon"></i>
+                            <p className='contact-bottom-desc'><b>Phone: </b>+91 8806862672</p>
+                        </div>
+
+                        <div className='col-3 contact-bottom-icon-desc'>
+                            <i class="fa-solid fa-paper-plane contact-bottom-icon"></i>
+                            <p className='contact-bottom-desc'><b>Email: </b>sweetaffairs@gmail.com</p>
+                        </div>
+
+                        <div className='col-3 contact-bottom-icon-desc'>
+                            <i class="fa-solid fa-earth-americas contact-bottom-icon"></i>
+                            <p className='contact-bottom-desc'><b>Website: </b>sweetaffairs.com</p>
+                        </div>
+
+                    </div>
+
                 </div>
+
             </div>
 
             <Footer />
