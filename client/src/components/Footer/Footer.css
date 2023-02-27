@@ -8,16 +8,16 @@
     background-image: linear-gradient(to right, #25aae1, #4481eb, #04befe, #3f86ed);
     outline: none;
     font-weight: 700;
-    color: rgb(18, 18, 18);
+    color: #1f1f29;
     margin-top: 80px;
 }
 
 .rest-name{
-    color: rgb(18, 18, 18);
+    color: #1f1f29;
 }
 
 .rest-name:hover{
-    color: #fff;
+    color: #f5f5fa;
 }
 
 .footer-middle-part {
@@ -39,7 +39,7 @@
     margin-left: auto;
     margin-right: auto;
     margin-top: -50px;
-    color: rgb(18, 18, 18);
+    color: #1f1f29;
 }
 
 .footer-middle-part:hover {
@@ -53,7 +53,7 @@
 .footer-middle-part-text {
     font-size: 12px;
     width: 150px;
-    color: rgb(18, 18, 18);
+    color: #1f1f29;
     margin-left: 50px;
 }
 
@@ -66,7 +66,7 @@
     text-align: center;
     font-size: 12px;
     font-weight: bold;
-    color: rgba(255, 255, 255, 0.837);
+    color: #f5f5fa;
     background-size: 300% 100%;
     moz-transition: all .4s ease-in-out;
     -o-transition: all .4s ease-in-out;
@@ -83,7 +83,6 @@
     -o-transition: all .4s ease-in-out;
     -webkit-transition: all .4s ease-in-out;
     transition: all .4s ease-in-out;
-
 }
 
 .footer-row {
@@ -101,9 +100,8 @@
     margin-right: auto;
 }
 
-.footer-col p:hover,
-h6:hover {
-    color: #fff;
+.footer-col p:hover{
+    color: #f5f5fa;
     cursor: pointer;
 }
 
@@ -113,7 +111,23 @@ h6:hover {
     margin-bottom: 10px;
     border-radius: 3px;
     border: none;
+    font-weight: bold;
+}
 
+.subs-input:invalid{
+    animation: shake 0.2s 2;
+}
+
+@keyframes shake{
+    25%{
+        translate: 6px 0;
+    }
+    50%{
+        translate: -6px 0;
+    }
+    75%{
+        translate: 6px 0;
+    }
 }
 
 .subs-input-2 {
@@ -124,7 +138,7 @@ h6:hover {
     text-align: center;
     font-size: 12px;
     font-weight: bold;
-    color: rgba(255, 255, 255, 0.837);
+    color: #f5f5fa;
     background-size: 300% 100%;
     moz-transition: all .4s ease-in-out;
     -o-transition: all .4s ease-in-out;
@@ -144,13 +158,13 @@ h6:hover {
 }
 
 .socials-link{
-    color: rgb(18, 18, 18);
+    color: #1f1f29;
     text-decoration: none;
     display: flex;
 }
 
 .socials-link:hover{
-    color: #fff;
+    color: #f5f5fa;
 }
 
 .copyright-section {
@@ -172,5 +186,5 @@ h6:hover {
 }
 
 .copyright-section p:hover {
-    color: #fff;
+    color: #f5f5fa;
 }

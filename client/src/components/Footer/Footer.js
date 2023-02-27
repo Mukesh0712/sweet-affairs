@@ -1,6 +1,6 @@
-import React from 'react'
-import "./Footer.css"
-import {Link} from "react-router-dom"
+import React from 'react';
+import "./Footer.css";
+import {Link} from "react-router-dom";
 
 function Footer() {
     return (
@@ -37,7 +37,7 @@ function Footer() {
 
                 <div className='col-3 footer-col'>
                     <p>Subscribe to get important Updates</p>
-                    <input placeholder='Your E-MAIL' className='text-center subs-input'/>
+                    <input placeholder='Your E-MAIL' className='text-center subs-input' type='email' />
                     <input value='SUBSCRIBE' className='text-center subs-input-2 text-white'/>
                 </div>
 
@@ -52,4 +52,4 @@ function Footer() {
     )
 }
 
-export default Footer
+export default Footer;

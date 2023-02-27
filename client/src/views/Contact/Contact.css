@@ -1,15 +1,15 @@
-.contact-container{
+.contact-container {
     margin: 50px auto 0 auto;
     width: 850px;
     padding: 15px;
     border-radius: 5px;
-    box-shadow: 0 0 8px 2px rgba(0, 0, 0, 0.325);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25);
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.contact-card{
+.contact-card {
     height: 320px;
     width: 370px;
     margin-top: 15px;
@@ -18,13 +18,13 @@
     background: rgba(148, 148, 148, 0.15);
 }
 
-.contact-name{
+.contact-name {
     margin: 0;
     padding: 0;
     font-size: 20px;
 }
 
-.send-btn{
+.send-btn {
     margin-top: 10px;
     padding: 5px;
     font-size: 12px;
@@ -34,46 +34,47 @@
     border: none;
     width: 110px;
     background-size: 300% 100%;
-    moz-transition: all .4s ease-in-out;
-    -o-transition: all .4s ease-in-out;
-    -webkit-transition: all .4s ease-in-out;
-    transition: all .4s ease-in-out;
-    background-image: linear-gradient(to right, #25aae1, #4481eb, #04befe, #3f86ed);
+    moz-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    -webkit-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+    background-image: linear-gradient(to right,
+            #25aae1,
+            #4481eb,
+            #04befe,
+            #3f86ed);
     outline: none;
-
 }
 
-.send-btn:hover{
+.send-btn:hover {
     background-position: 100% 0;
-    moz-transition: all .4s ease-in-out;
-    -o-transition: all .4s ease-in-out;
-    -webkit-transition: all .4s ease-in-out;
-    transition: all .4s ease-in-out;
-
+    moz-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    -webkit-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
 }
 
-.map-container{
+.map-container {
     margin-top: 15px;
     width: 300px;
     height: 320px;
     margin-bottom: 10px;
-    background: rgba(128, 128, 128, 0.185);
-
+    background: rgba(148, 148, 148, 0.15);
 }
 
-.map{
+.map {
     width: 290px;
 }
 
-form{
+form {
     margin-top: 5px;
 }
 
-form label{
-    font-weight: 600; 
+form label {
+    font-weight: 600;
 }
 
-.input-box{
+.input-box {
     margin: 5px 0 5px 0;
     width: 300px;
     height: 29px;
@@ -81,56 +82,60 @@ form label{
     border-radius: 3px;
     padding: 7px;
     font-size: 12px;
+    caret-color: #4481eb;
 }
 
-.textarea{
+.textarea {
     margin: 5px 0 5px 0;
     width: 300px;
     height: 60px;
     border: none;
-    overflow-y: scroll;
     border-radius: 3px;
     padding: 7px;
     font-size: 12px;
+    caret-color: #4481eb;
 }
 
-.contact-bottom{
+.contact-bottom {
     display: flex;
     justify-content: center;
 }
 
-.contact-bottom-icon-desc{
+.contact-bottom-icon-desc {
     width: 160px;
     margin: 10px;
     text-align: center;
     cursor: pointer;
 }
 
-.contact-bottom-icon{
+.contact-bottom-icon {
     margin-top: 15px;
     font-size: 12px;
     padding: 12px;
     background-size: 300% 100%;
-    moz-transition: all .4s ease-in-out;
-    -o-transition: all .4s ease-in-out;
-    -webkit-transition: all .4s ease-in-out;
-    transition: all .4s ease-in-out;
-    background-image: linear-gradient(to right, #25aae1, #4481eb, #04befe, #3f86ed);
+    moz-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    -webkit-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+    background-image: linear-gradient(to right,
+            #25aae1,
+            #4481eb,
+            #04befe,
+            #3f86ed);
     outline: none;
     border-radius: 50%;
     color: #fff;
 }
 
-.contact-bottom-icon:hover{
+.contact-bottom-icon:hover {
     background-position: 100% 0;
-    moz-transition: all .4s ease-in-out;
-    -o-transition: all .4s ease-in-out;
-    -webkit-transition: all .4s ease-in-out;
-    transition: all .4s ease-in-out;
-
+    moz-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    -webkit-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
 }
 
-.contact-bottom-desc{
+.contact-bottom-desc {
     margin-top: 10px;
     font-size: 10px;
 }
