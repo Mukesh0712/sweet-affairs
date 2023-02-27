@@ -83,6 +83,11 @@ function MyPlate() {
                                     <div className='plate'>
                                         <h6 className='plate-text'>Quantity : {item.quantity}</h6>
                                     </div>
+
+                                    <div className='plate'>
+                                        <h6 className='plate-text'>Total Amount : {item.price * item.quantity} &#8377;</h6>
+                                    </div>
+
                                 </div>
 
                                 <div className='dlt-plate'>

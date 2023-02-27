@@ -11,6 +11,7 @@ import MyOrders from './views/MyOrders/MyOrders'
 import Profile from './views/Profile/Profile'
 import Menu from './views/Menu/Menu'
 import Table from './views/Table/Table'
+import Payment from './views/Payment/Payment'
 
 const App = () => {
   return (
@@ -27,6 +28,7 @@ const App = () => {
           <Route path='/profile' element={<Profile/>} />
           <Route path='/menu' element={<Menu/>} />
           <Route path='/tables' element={<Table/>} />
+          <Route path='/payment' element={<Payment/>} />
         </Routes>
       </BrowserRouter>
       
