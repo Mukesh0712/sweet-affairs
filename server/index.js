@@ -2,6 +2,9 @@ import express from "express";
 import mongoose from "mongoose";
 import dotenv from "dotenv";
 dotenv.config();
+import path from "path";
+
+const _dirname = path.resolve();
 
 import User from "./models/User.js";
 import FoodItem from "./models/FoodItem.js";
@@ -388,6 +391,13 @@ app.get('/ordersByUserID', async (req, res) => {
         data: orders
     })
 })
+
+//Send Request to frontend
+app.use(express.static(path.join(_dirname, '..', 'client', 'build')));
+
+app.get('*', (req, res) => {
+    res.sendFile(path.join(_dirname, '..', 'client', 'build', 'index.html'));
+});
 
 app.listen(PORT, () => {
     console.log(`Server Running on Port ${PORT}`);

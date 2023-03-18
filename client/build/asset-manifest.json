@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/static/css/main.c639f159.css",
+    "main.js": "/static/js/main.d47bc910.js",
+    "static/js/787.c4e7f8f9.chunk.js": "/static/js/787.c4e7f8f9.chunk.js",
+    "static/media/Valentine's Day dinner-amico.png": "/static/media/Valentine's Day dinner-amico.2c184a136b33b64d0173.png",
+    "static/media/Tasting-amico.png": "/static/media/Tasting-amico.9abc3d0634c72223f991.png",
+    "index.html": "/index.html",
+    "main.c639f159.css.map": "/static/css/main.c639f159.css.map",
+    "main.d47bc910.js.map": "/static/js/main.d47bc910.js.map",
+    "787.c4e7f8f9.chunk.js.map": "/static/js/787.c4e7f8f9.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c639f159.css",
+    "static/js/main.d47bc910.js"
+  ]
+}
